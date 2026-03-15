@@ -160,16 +160,37 @@
             margin-top: 4px;
         }
 
-        .co-host-badge {
+        .overlap-stack {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .overlap-stack .host-card {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .overlap-stack .host-card:last-of-type {
+            border-bottom: none;
+        }
+
+        .overlap-badge {
+            position: absolute;
+            top: 8px;
+            right: 12px;
             font-family: var(--font-mono);
-            font-size: 0.65rem;
+            font-size: 0.6rem;
             font-weight: 600;
-            background: var(--surface);
-            color: var(--text-2);
+            background: #ff6b35;
+            color: #fff;
             padding: 3px 8px;
             border-radius: 100px;
-            letter-spacing: 0.03em;
-            white-space: nowrap;
+            letter-spacing: 0.05em;
+        }
+
+        .time-block.overlap {
+            border-left: 3px solid #ff6b35;
+            margin-left: -1px;
         }
 
         .csn-badge {
@@ -275,7 +296,7 @@
         </div>
     </section>
 
-    <p class="timezone-note">All times EST · Daily schedule · Co-hosts marked with ↔</p>
+    <p class="timezone-note">All times EST · Daily schedule · Overlaps marked in orange</p>
 
     <!-- Schedule Timeline -->
     <div class="schedule-container">
@@ -361,17 +382,26 @@
         <!-- Afternoon -->
         <div class="day-divider"><span>Afternoon</span></div>
 
-        <div class="time-block">
+        <div class="time-block overlap">
             <div class="time-label">12:00<span class="period">PM</span></div>
-            <a href="https://x.com/lil_defi" target="_blank" class="host-card">
-                <img src="avatars/lil_defi.jpg" class="host-avatar" alt="Cake & Defi">
-                <div class="host-info">
-                    <div class="host-name">Cake ↔ Defi</div>
-                    <div class="host-handle">@lil_defi</div>
-                </div>
-                <span class="co-host-badge">CO-HOST</span>
-                <span class="csn-badge">H+CSN</span>
-            </a>
+            <div class="overlap-stack">
+                <a href="https://x.com/search?q=from%3Atypemedia+spaces" target="_blank" class="host-card">
+                    <img src="avatars/placeholder-cake.jpg" class="host-avatar" alt="Cake" onerror="this.style.display='none'">
+                    <div class="host-info">
+                        <div class="host-name">Cake</div>
+                        <div class="host-handle">@typemedia affiliate</div>
+                    </div>
+                </a>
+                <a href="https://x.com/lil_defi" target="_blank" class="host-card">
+                    <img src="avatars/lil_defi.jpg" class="host-avatar" alt="Defi">
+                    <div class="host-info">
+                        <div class="host-name">Defi</div>
+                        <div class="host-handle">@lil_defi</div>
+                    </div>
+                    <span class="csn-badge">H+CSN</span>
+                </a>
+                <span class="overlap-badge">OVERLAP</span>
+            </div>
         </div>
 
         <div class="time-block">
@@ -398,16 +428,25 @@
             </a>
         </div>
 
-        <div class="time-block">
+        <div class="time-block overlap">
             <div class="time-label">3:00<span class="period">PM</span></div>
-            <a href="https://x.com/baileycMETA" target="_blank" class="host-card">
-                <img src="avatars/baileycmeta.jpg" class="host-avatar" alt="Goose & Bailey">
-                <div class="host-info">
-                    <div class="host-name">Goose ↔ Bailey</div>
-                    <div class="host-handle">@baileycMETA</div>
-                </div>
-                <span class="co-host-badge">CO-HOST</span>
-            </a>
+            <div class="overlap-stack">
+                <a href="https://x.com/search?q=from%3Atypemedia+spaces" target="_blank" class="host-card">
+                    <img src="avatars/placeholder-goose.jpg" class="host-avatar" alt="Goose" onerror="this.style.display='none'">
+                    <div class="host-info">
+                        <div class="host-name">Goose</div>
+                        <div class="host-handle">@typemedia affiliate</div>
+                    </div>
+                </a>
+                <a href="https://x.com/baileycMETA" target="_blank" class="host-card">
+                    <img src="avatars/baileycmeta.jpg" class="host-avatar" alt="Bailey">
+                    <div class="host-info">
+                        <div class="host-name">Bailey</div>
+                        <div class="host-handle">@baileycMETA</div>
+                    </div>
+                </a>
+                <span class="overlap-badge">OVERLAP</span>
+            </div>
         </div>
 
         <div class="time-block">
@@ -448,28 +487,46 @@
             </a>
         </div>
 
-        <div class="time-block">
+        <div class="time-block overlap">
             <div class="time-label">8:00<span class="period">PM</span></div>
-            <a href="https://x.com/mellowmeta" target="_blank" class="host-card">
-                <img src="avatars/mellowmeta.jpg" class="host-avatar" alt="Mellow & Scad">
-                <div class="host-info">
-                    <div class="host-name">Mellow ↔ Scad</div>
-                    <div class="host-handle">@mellowmeta · @ScadMeta</div>
-                </div>
-                <span class="co-host-badge">CO-HOST</span>
-            </a>
+            <div class="overlap-stack">
+                <a href="https://x.com/mellowmeta" target="_blank" class="host-card">
+                    <img src="avatars/mellowmeta.jpg" class="host-avatar" alt="Mellow">
+                    <div class="host-info">
+                        <div class="host-name">Mellow</div>
+                        <div class="host-handle">@mellowmeta</div>
+                    </div>
+                </a>
+                <a href="https://x.com/ScadMeta" target="_blank" class="host-card">
+                    <img src="avatars/scadmeta.jpg" class="host-avatar" alt="Scad">
+                    <div class="host-info">
+                        <div class="host-name">Scad</div>
+                        <div class="host-handle">@ScadMeta</div>
+                    </div>
+                </a>
+                <span class="overlap-badge">OVERLAP</span>
+            </div>
         </div>
 
-        <div class="time-block">
+        <div class="time-block overlap">
             <div class="time-label">9:00<span class="period">PM</span></div>
-            <a href="https://x.com/Javimedia" target="_blank" class="host-card">
-                <img src="avatars/javimedia.jpg" class="host-avatar" alt="Javi & DJ">
-                <div class="host-info">
-                    <div class="host-name">Javi ↔ DJ</div>
-                    <div class="host-handle">@Javimedia · @DJAlevy8</div>
-                </div>
-                <span class="co-host-badge">CO-HOST</span>
-            </a>
+            <div class="overlap-stack">
+                <a href="https://x.com/Javimedia" target="_blank" class="host-card">
+                    <img src="avatars/javimedia.jpg" class="host-avatar" alt="Javi">
+                    <div class="host-info">
+                        <div class="host-name">Javi</div>
+                        <div class="host-handle">@Javimedia</div>
+                    </div>
+                </a>
+                <a href="https://x.com/DJAlevy8" target="_blank" class="host-card">
+                    <img src="avatars/djalevy8.jpg" class="host-avatar" alt="DJ">
+                    <div class="host-info">
+                        <div class="host-name">DJ</div>
+                        <div class="host-handle">@DJAlevy8</div>
+                    </div>
+                </a>
+                <span class="overlap-badge">OVERLAP</span>
+            </div>
         </div>
 
         <!-- Late Night -->
