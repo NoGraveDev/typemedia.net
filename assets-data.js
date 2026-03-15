@@ -1,25 +1,26 @@
 /*
- * ASSETS DATA — Type Media DAO Treasury
- * 
- * To add assets, update the ASSETS array below.
- * Each asset needs: name, id, image (URL)
- * Optional: traits (array of strings), collection (string)
- * 
- * Once Adam provides the real NFT data, replace the 
- * placeholder entries and the grid will populate automatically.
+ * ASSETS DATA — Type Media Treasury
+ * Wallet: DLD7uMv9nMgKVECRgurTisAyTb19X3Tmjv
+ * Source: doggy.market NFTs tab
  */
 
-const ASSETS = [
-    // ── PLACEHOLDER — Replace with real Doginal NFT data ──
-    // Example format:
-    // {
-    //     name: "Doginal Dog #1234",
-    //     id: "#1234",
-    //     image: "https://path-to-image.png",
-    //     traits: ["Blue Background", "Sunglasses", "Gold Chain"],
-    //     collection: "Doginal Dogs",
-    //     marketUrl: "https://market.doginaldogs.com/asset/1234"
-    // },
+const TREASURY_DOGS = [
+    { id: 1650, inscription: "f9b3bc90c188be1937bc1505ee8e46f78bf49b899ba6c9a20189844a56bc0abfi0", number: 61338619 },
+    { id: 625, inscription: "1f6a3f219df763b97b360ed1cfaba2e602e5956872cf4a0e9ea975f5481fbdadi0", number: 61345367 },
+    { id: 7342, inscription: "2f2af37ac901771632e01dc2008828a14c8051a4272f25726659ea97996ebd2ci0", number: 61346034 },
+    { id: 7409, inscription: "4c9892990c312c8fa71c3d36d090aa04e080168e46780315892be5cde028d69ci0", number: 61347126 },
+    { id: 6821, inscription: "cdcb89e754b6eb843f2bc1cf7aac35a11a94895cd28ebc304c1aa598acad26c5i0", number: 61347137 },
+    { id: 7640, inscription: "1fc4df053c210ff40b526a8e407e8482b47ee9a36331d3207e491619e234374ei0", number: 61347462 },
+    { id: 6968, inscription: "2918f62732b51eaa083e7fbaf64891e6a6d5ed133ac4257cac40c784e8a3b7d6i0", number: 61347634 },
+    { id: 7643, inscription: "19be3faf3801f36d94c19c13f7c51b0ad1b77718672440e75486eafa5bed5d77i0", number: 61347666 },
+    { id: 6225, inscription: "ae8cccd516dc7082b642142aaa1ae64876ae6ab043ea06c54d701574625037cfi0", number: 61348665 },
+    { id: 7107, inscription: "53547d2eb3448786424d41015ed94da13318f6f3c08fbf6eef7aa257c55e2e36i0", number: 61349601 },
+    { id: 3246, inscription: "9906ad07847d30e3ec2b7a33526e09231fbf86ceba54aee671d13270945ba8fbi0", number: 61350426 },
+    { id: 3107, inscription: "7e96e555cd9b7b3232216e30db4db345728c78446b6f3448577776f6b5fd7c4bi0", number: 61353444 },
+    { id: 9682, inscription: "485bc49e676d1d402c8b45188d8049fe9cff3a596b5d4f01587c1c4188ddbd09i0", number: 61355266 },
+    { id: 8826, inscription: "f5a576830326f4107b9d4a46a1fd928b086f76e08872fe5c0d7c20ac43e3b5f0i0", number: 61355549 },
+    { id: 8591, inscription: "da06cb4244d457a9b12ed0cc1f566e60be3719ce1ad170f266ff7a4f486e4240i0", number: 61356763 },
+    { id: 8096, inscription: "9f8ff59c9cf61fae26186badd7bcc71f2a5d3dd7e1e645fbd2d12867b37abda3i0", number: 61357968 },
 ];
 
 // ── Render Assets ──────────────────────────────────
@@ -29,48 +30,31 @@ function renderAssets() {
     const totalEl = document.getElementById('totalAssets');
     const floorEl = document.getElementById('floorValue');
     const rarestEl = document.getElementById('rarest');
-    
-    if (!grid) return;
 
-    if (ASSETS.length === 0) {
-        grid.style.display = 'none';
-        if (placeholder) placeholder.style.display = 'block';
-        return;
-    }
+    if (!grid) return;
 
     // Hide placeholder, show grid
     if (placeholder) placeholder.style.display = 'none';
     grid.style.display = 'grid';
 
     // Update stats
-    if (totalEl) totalEl.textContent = ASSETS.length;
-    if (floorEl) floorEl.textContent = `$${(ASSETS.length * 5000).toLocaleString()}`; // Estimated at $5K floor
-    if (rarestEl) rarestEl.textContent = ASSETS[0]?.name || '—';
+    if (totalEl) totalEl.textContent = TREASURY_DOGS.length;
+    if (floorEl) floorEl.textContent = '—';
+    if (rarestEl) rarestEl.textContent = '#' + Math.min(...TREASURY_DOGS.map(d => d.id));
 
-    grid.innerHTML = ASSETS.map((a, i) => {
-        const traitsHtml = (a.traits || []).map(t => 
-            `<span class="asset-card-trait">${t}</span>`
-        ).join('');
-        
-        const linkWrap = a.marketUrl 
-            ? [`<a href="${a.marketUrl}" target="_blank" style="text-decoration:none;color:inherit;">`, `</a>`]
-            : ['', ''];
-
+    grid.innerHTML = TREASURY_DOGS.map((dog, i) => {
+        const marketUrl = `https://doggy.market/inscription/${dog.inscription}`;
         return `
-        ${linkWrap[0]}
-        <div class="asset-card" style="animation-delay: ${i * 0.04}s">
-            <div class="asset-card-image">
-                <img src="${a.image}" alt="${a.name}" loading="lazy">
+        <a href="${marketUrl}" target="_blank" class="asset-card" style="animation-delay: ${i * 0.05}s">
+            <div class="asset-img-wrap">
+                <img src="dogs/dog-${dog.id}.png" alt="Doginal Dog #${dog.id}" loading="lazy" class="asset-img">
             </div>
-            <div class="asset-card-info">
-                <div class="asset-card-name">${a.name}</div>
-                <div class="asset-card-id">${a.id}</div>
-                ${traitsHtml ? `<div class="asset-card-traits">${traitsHtml}</div>` : ''}
+            <div class="asset-info">
+                <div class="asset-name">Dog #${dog.id}</div>
+                <div class="asset-meta">Inscription #${dog.number.toLocaleString()}</div>
             </div>
-        </div>
-        ${linkWrap[1]}`;
+        </a>`;
     }).join('');
 }
 
-// Init on load
 document.addEventListener('DOMContentLoaded', renderAssets);

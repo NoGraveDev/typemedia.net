@@ -10,6 +10,98 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect fill='%23111' width='32' height='32' rx='6'/><text x='16' y='22' font-size='14' font-weight='bold' text-anchor='middle' fill='%23fff'>TM</text></svg>">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .assets-stats {
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            margin-top: 24px;
+            flex-wrap: wrap;
+        }
+        .asset-stat {
+            text-align: center;
+        }
+        .asset-stat-value {
+            display: block;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+        }
+        .asset-stat-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: #999;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .assets-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 16px;
+            padding: 40px 20px 60px;
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+        .asset-card {
+            background: #fafafa;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s ease;
+            animation: fadeUp 0.4s ease both;
+        }
+        .asset-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            border-color: #ddd;
+        }
+        .asset-img-wrap {
+            aspect-ratio: 1;
+            overflow: hidden;
+            background: #f0f0f0;
+        }
+        .asset-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            image-rendering: pixelated;
+        }
+        .asset-info {
+            padding: 12px;
+        }
+        .asset-name {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+        .asset-meta {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            color: #999;
+            margin-top: 2px;
+        }
+        .assets-placeholder {
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .placeholder-icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @media (max-width: 600px) {
+            .assets-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                padding: 20px 12px 40px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Nav -->
@@ -43,6 +135,7 @@
     <div class="mobile-menu">
         <a href="index.html" class="mobile-link">Home</a>
         <a href="members.html" class="mobile-link">Members</a>
+        <a href="schedule.html" class="mobile-link">Schedule</a>
         <a href="assets.html" class="mobile-link active">Assets</a>
         <div class="mobile-socials">
             <a href="https://x.com/typemedia" target="_blank">X / Twitter</a>
