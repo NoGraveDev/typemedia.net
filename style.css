@@ -118,6 +118,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .hero-title-line { display: none; }
 .hero-title .hero-logo-img {
     display: block; max-width: 200px; height: auto; margin: 0 auto;
+    filter: drop-shadow(0 8px 24px rgba(0,0,0,0.15)) drop-shadow(0 2px 8px rgba(0,0,0,0.1));
+    border-radius: 20px;
 }
 .hero-sub {
     font-size: 17px; color: var(--text-2); line-height: 1.8;
