@@ -7,7 +7,6 @@
 
 const MEMBERS = [
     { handle: "@rivaura", avatar: "avatars/rivaura.jpg" },
-    { handle: "@hBUDS_", avatar: "avatars/hbuds_.jpg" },
     { handle: "@DJAlevy8", avatar: "avatars/djalevy8.jpg" },
     { handle: "@corey_on_x", avatar: "avatars/corey_on_x.jpg" },
     { handle: "@emeta777", avatar: "avatars/emeta777.jpg" },
@@ -27,6 +26,7 @@ const MEMBERS = [
     { handle: "@MotionMetaX", avatar: "avatars/motionmetax.jpg" },
     { handle: "@Javimedia", avatar: "avatars/javimedia.jpg" },
     { handle: "@Humble_Reminder", avatar: "avatars/humble_reminder.jpg" },
+    { handle: "@hBUDS_", avatar: "avatars/hbuds_.jpg" },
     { handle: "@ScadMeta", avatar: "avatars/scadmeta.jpg" },
     { handle: "@s1xkr", avatar: "avatars/s1xkr.jpg" },
     { handle: "@lil_defi", avatar: "avatars/lil_defi.jpg" },
