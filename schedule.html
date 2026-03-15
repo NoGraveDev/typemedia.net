@@ -174,6 +174,42 @@
             border-bottom: none;
         }
 
+        .live-now-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-family: var(--font-mono);
+            font-size: 0.6rem;
+            font-weight: 700;
+            background: #dc2626;
+            color: #fff;
+            padding: 3px 10px;
+            border-radius: 100px;
+            letter-spacing: 0.05em;
+            white-space: nowrap;
+            animation: pulse-live 2s ease-in-out infinite;
+        }
+        .live-now-badge::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: #fff;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        @keyframes pulse-live {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        .time-block.is-live .host-card {
+            background: rgba(220, 38, 38, 0.04);
+            border-left: 3px solid #dc2626;
+        }
+        .time-block.is-live .time-label {
+            color: #dc2626;
+            font-weight: 700;
+        }
+
         .overlap-badge {
             position: absolute;
             top: 8px;
@@ -330,20 +366,20 @@
         <!-- Morning -->
         <div class="day-divider"><span>Morning</span></div>
 
-        <div class="time-block">
-            <div class="time-label">4:30<span class="period">AM</span></div>
-            <a href="https://x.com/Chuckmetax" target="_blank" class="host-card">
-                <img src="avatars/chuckmetax.jpg" class="host-avatar" alt="Chuck">
+        <div class="time-block" data-hour="6">
+            <div class="time-label">6:00<span class="period">AM</span></div>
+            <a href="https://x.com/leahbluewater" target="_blank" class="host-card">
+                <img src="avatars/leahbluewater.jpg" class="host-avatar" alt="Leah">
                 <div class="host-info">
-                    <div class="host-name">Chuck</div>
-                    <div class="host-handle">@Chuckmetax</div>
-                    <div class="host-show">AM Motivation</div>
+                    <div class="host-name">Leah</div>
+                    <div class="host-handle">@leahbluewater</div>
+                    <div class="host-show">The Kickoff</div>
                 </div>
                 <span class="type-badge"><img src="logo.jpg" alt="Type Media"></span>
             </a>
         </div>
 
-        <div class="time-block">
+        <div class="time-block" data-hour="9">
             <div class="time-label">9:00<span class="period">AM</span></div>
             <a href="https://x.com/peak_arf" target="_blank" class="host-card">
                 <img src="avatars/peak_arf.jpg" class="host-avatar" alt="Peak">
@@ -356,7 +392,7 @@
             </a>
         </div>
 
-        <div class="time-block">
+        <div class="time-block" data-hour="10">
             <div class="time-label">10:00<span class="period">AM</span></div>
             <a href="https://x.com/AimDontMiss" target="_blank" class="host-card">
                 <img src="avatars/aimdontmiss.jpg" class="host-avatar" alt="Shibo / Aim">
@@ -372,7 +408,7 @@
         <!-- Afternoon -->
         <div class="day-divider"><span>Afternoon</span></div>
 
-        <div class="time-block">
+        <div class="time-block" data-hour="12">
             <div class="time-label">12:00<span class="period">PM</span></div>
             <a href="https://x.com/lil_defi" target="_blank" class="host-card">
                 <img src="avatars/lil_defi.jpg" class="host-avatar" alt="Defi">
@@ -386,7 +422,7 @@
             </a>
         </div>
 
-        <div class="time-block">
+        <div class="time-block" data-hour="13">
             <div class="time-label">1:00<span class="period">PM</span></div>
             <a href="https://x.com/GuyTypeAura" target="_blank" class="host-card">
                 <img src="avatars/guytypeaura.jpg" class="host-avatar" alt="Guy">
@@ -399,7 +435,7 @@
             </a>
         </div>
 
-        <div class="time-block">
+        <div class="time-block" data-hour="15">
             <div class="time-label">3:00<span class="period">PM</span></div>
             <a href="https://x.com/baileycMETA" target="_blank" class="host-card">
                 <img src="avatars/baileycmeta.jpg" class="host-avatar" alt="Bailey">
@@ -411,7 +447,7 @@
             </a>
         </div>
 
-        <div class="time-block">
+        <div class="time-block" data-hour="16">
             <div class="time-label">4:00<span class="period">PM</span></div>
             <a href="https://x.com/gruvemeta" target="_blank" class="host-card">
                 <img src="avatars/gruvemeta.jpg" class="host-avatar" alt="Gruve">
@@ -426,7 +462,7 @@
         <!-- Evening -->
         <div class="day-divider"><span>Evening</span></div>
 
-        <div class="time-block">
+        <div class="time-block" data-hour="19">
             <div class="time-label">7:00<span class="period">PM</span></div>
             <a href="https://x.com/Mavmetax" target="_blank" class="host-card">
                 <img src="avatars/mavmetax.jpg" class="host-avatar" alt="Mav">
@@ -439,7 +475,7 @@
             </a>
         </div>
 
-        <div class="time-block overlap">
+        <div class="time-block overlap" data-hour="20">
             <div class="time-label">8:00<span class="period">PM</span></div>
             <div class="overlap-stack">
                 <a href="https://x.com/mellowmeta" target="_blank" class="host-card">
@@ -462,7 +498,7 @@
             </div>
         </div>
 
-        <div class="time-block overlap">
+        <div class="time-block overlap" data-hour="21">
             <div class="time-label">9:00<span class="period">PM</span></div>
             <div class="overlap-stack">
                 <a href="https://x.com/Javimedia" target="_blank" class="host-card">
@@ -485,10 +521,7 @@
             </div>
         </div>
 
-        <!-- Late Night -->
-        <div class="day-divider"><span>Late Night</span></div>
-
-        <div class="time-block">
+        <div class="time-block" data-hour="22.5">
             <div class="time-label">10:30<span class="period">PM</span></div>
             <a href="https://x.com/rivaura" target="_blank" class="host-card">
                 <img src="avatars/rivaura.jpg" class="host-avatar" alt="Riv">
@@ -502,7 +535,10 @@
             </a>
         </div>
 
-        <div class="time-block">
+        <!-- Late Nite -->
+        <div class="day-divider"><span>Late Nite</span></div>
+
+        <div class="time-block" data-hour="0">
             <div class="time-label">12:00<span class="period">AM</span></div>
             <a href="https://x.com/luismeta" target="_blank" class="host-card">
                 <img src="avatars/luismeta.jpg" class="host-avatar" alt="Luis">
@@ -516,13 +552,26 @@
             </a>
         </div>
 
-        <div class="time-block">
+        <div class="time-block" data-hour="1.5">
             <div class="time-label">1:30<span class="period">AM</span></div>
             <a href="https://x.com/Ajmetax" target="_blank" class="host-card">
                 <img src="avatars/ajmetax.jpg" class="host-avatar" alt="AJ">
                 <div class="host-info">
                     <div class="host-name">AJ</div>
                     <div class="host-handle">@Ajmetax</div>
+                </div>
+                <span class="type-badge"><img src="logo.jpg" alt="Type Media"></span>
+            </a>
+        </div>
+
+        <div class="time-block" data-hour="4.5">
+            <div class="time-label">4:30<span class="period">AM</span></div>
+            <a href="https://x.com/Chuckmetax" target="_blank" class="host-card">
+                <img src="avatars/chuckmetax.jpg" class="host-avatar" alt="Chuck">
+                <div class="host-info">
+                    <div class="host-name">Chuck</div>
+                    <div class="host-handle">@Chuckmetax</div>
+                    <div class="host-show">AM Motivation</div>
                 </div>
                 <span class="type-badge"><img src="logo.jpg" alt="Type Media"></span>
             </a>
@@ -537,5 +586,68 @@
         </p>
     </footer>
 
+    <script>
+    // Auto-detect LIVE space based on EST time
+    (function() {
+        // Schedule in order: [startHour, endHour] in 24h EST
+        // For hours after midnight, use 0-5 range
+        var schedule = [
+            {start: 6, end: 9},      // Leah
+            {start: 9, end: 10},      // Peak
+            {start: 10, end: 12},     // Aim
+            {start: 12, end: 13},     // Defi
+            {start: 13, end: 15},     // Guy
+            {start: 15, end: 16},     // Bailey
+            {start: 16, end: 19},     // Gruve
+            {start: 19, end: 20},     // Mav
+            {start: 20, end: 21},     // Mellow+Scad
+            {start: 21, end: 22.5},   // Javi+DJ
+            {start: 22.5, end: 24},   // Riv (22:30 = 10:30PM)
+            {start: 0, end: 1.5},     // Luis (12AM-1:30AM)
+            {start: 1.5, end: 4.5},   // AJ
+            {start: 4.5, end: 6}      // Chuck
+        ];
+
+        var now = new Date();
+        var est = new Date(now.toLocaleString('en-US', {timeZone: 'America/New_York'}));
+        var currentHour = est.getHours() + est.getMinutes() / 60;
+
+        var blocks = document.querySelectorAll('.time-block[data-hour]');
+        var scheduleIndex = -1;
+
+        // Find which schedule slot is active
+        for (var i = 0; i < schedule.length; i++) {
+            var s = schedule[i];
+            if (s.start < s.end) {
+                if (currentHour >= s.start && currentHour < s.end) {
+                    scheduleIndex = i;
+                    break;
+                }
+            }
+        }
+
+        if (scheduleIndex === -1) return;
+
+        // Map schedule index to time block
+        var targetHour = schedule[scheduleIndex].start;
+        for (var j = 0; j < blocks.length; j++) {
+            var blockHour = parseFloat(blocks[j].getAttribute('data-hour'));
+            if (blockHour === targetHour) {
+                blocks[j].classList.add('is-live');
+                // Add LIVE badge to the host card(s)
+                var cards = blocks[j].querySelectorAll('.host-card');
+                cards.forEach(function(card) {
+                    var badge = document.createElement('span');
+                    badge.className = 'live-now-badge';
+                    badge.textContent = 'LIVE';
+                    card.appendChild(badge);
+                });
+                // Scroll into view
+                blocks[j].scrollIntoView({behavior: 'smooth', block: 'center'});
+                break;
+            }
+        }
+    })();
+    </script>
 </body>
 </html>
