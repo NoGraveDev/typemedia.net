@@ -1,5 +1,5 @@
 /*
- * MEMBERS DATA — Type Media
+ * MEMBERS DATA - Type Media
  * 
  * Council members listed first, then affiliates.
  * Each member needs: handle (with @), avatar (path to PFP or null)

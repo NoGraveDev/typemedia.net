@@ -1,5 +1,5 @@
 /*
- * ASSETS DATA — Type Media Treasury
+ * ASSETS DATA - Type Media Treasury
  * Wallet: DLD7uMv9nMgKVECRgurTisAyTb19X3Tmjv
  * Source: doggy.market NFTs tab
  */
