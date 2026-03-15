@@ -6,6 +6,7 @@
  */
 
 const MEMBERS = [
+    { handle: "@hBUDS_", avatar: "avatars/hbuds_.jpg" },
     { handle: "@rivaura", avatar: "avatars/rivaura.jpg" },
     { handle: "@DJAlevy8", avatar: "avatars/djalevy8.jpg" },
     { handle: "@corey_on_x", avatar: "avatars/corey_on_x.jpg" },
