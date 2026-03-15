@@ -10,7 +10,7 @@ const COUNCIL = [
     { handle: "@rivaura", avatar: "avatars/rivaura.jpg", role: "CEO" },
     { handle: "@luismeta", avatar: "avatars/luismeta.jpg", role: "COO" },
     { handle: "@lil_defi", avatar: "avatars/lil_defi.jpg", role: "Council" },
-    { handle: "@corey_on_x", avatar: "avatars/corey_on_x.jpg", role: "Council" },
+    { handle: "@CoinMetaX", avatar: "avatars/coinmetax.jpg", role: "Council" },
     { handle: "@GuyTypeAura", avatar: "avatars/guytypeaura.jpg", role: "Council" },
     { handle: "@Javimedia", avatar: "avatars/javimedia.jpg", role: "Council" },
     { handle: "@ScadMeta", avatar: "avatars/scadmeta.jpg", role: "Council" },
