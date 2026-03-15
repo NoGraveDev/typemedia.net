@@ -640,69 +640,50 @@
     </footer>
 
     <script>
-    // Auto-detect LIVE space based on EST time
+    // Auto-detect LIVE spaces based on EST time
+    // Multiple hosts can be live at once (same time slot)
     (function() {
-        // Schedule in order: [startHour, endHour] in 24h EST
-        // For hours after midnight, use 0-5 range
-        var schedule = [
-            {start: 6, end: 7},       // Leah+BJ
-            {start: 7, end: 9},       // Vee
-            {start: 9, end: 10},      // Peak
-            {start: 10, end: 12},     // Aim
-            {start: 12, end: 13},     // Defi+Cake
-            {start: 13, end: 14},     // Guy
-            {start: 14, end: 15},     // Shield
-            {start: 15, end: 16},     // Bailey+Goose
-            {start: 16, end: 17},     // Gruve
-            {start: 17, end: 19},     // Bark
-            {start: 19, end: 20},     // Mav
-            {start: 20, end: 21},     // Mellow+Scad
-            {start: 21, end: 22.5},   // Javi+DJ
-            {start: 22.5, end: 24},   // Riv
-            {start: 0, end: 1.5},     // Luis
-            {start: 1.5, end: 3},     // AJ
-            {start: 3, end: 4.5},     // Edge
-            {start: 4.5, end: 6}      // Chuck
-        ];
-
         var now = new Date();
         var est = new Date(now.toLocaleString('en-US', {timeZone: 'America/New_York'}));
         var currentHour = est.getHours() + est.getMinutes() / 60;
 
+        // Map data-hour values to their active time ranges
+        var ranges = {
+            '6': [6, 7], '7': [7, 9], '9': [9, 10], '10': [10, 12],
+            '12': [12, 13], '13': [13, 14], '14': [14, 15], '15': [15, 16],
+            '16': [16, 17], '17': [17, 19], '19': [19, 20], '20': [20, 21],
+            '21': [21, 22.5], '22.5': [22.5, 24], '0': [0, 1.5],
+            '1.5': [1.5, 3], '3': [3, 4.5], '4.5': [4.5, 6]
+        };
+
         var blocks = document.querySelectorAll('.time-block[data-hour]');
-        var scheduleIndex = -1;
+        var firstLive = null;
 
-        // Find which schedule slot is active
-        for (var i = 0; i < schedule.length; i++) {
-            var s = schedule[i];
-            if (s.start < s.end) {
-                if (currentHour >= s.start && currentHour < s.end) {
-                    scheduleIndex = i;
-                    break;
-                }
+        blocks.forEach(function(block) {
+            var hour = block.getAttribute('data-hour');
+            var range = ranges[hour];
+            if (!range) return;
+
+            var isLive = false;
+            if (range[0] < range[1]) {
+                isLive = currentHour >= range[0] && currentHour < range[1];
             }
-        }
 
-        if (scheduleIndex === -1) return;
-
-        // Map schedule index to time block
-        var targetHour = schedule[scheduleIndex].start;
-        for (var j = 0; j < blocks.length; j++) {
-            var blockHour = parseFloat(blocks[j].getAttribute('data-hour'));
-            if (blockHour === targetHour) {
-                blocks[j].classList.add('is-live');
-                // Add LIVE badge to the host card(s)
-                var cards = blocks[j].querySelectorAll('.host-card');
-                cards.forEach(function(card) {
+            if (isLive) {
+                block.classList.add('is-live');
+                var card = block.querySelector('.host-card');
+                if (card) {
                     var badge = document.createElement('span');
                     badge.className = 'live-now-badge';
                     badge.textContent = 'LIVE';
                     card.appendChild(badge);
-                });
-                // Scroll into view
-                blocks[j].scrollIntoView({behavior: 'smooth', block: 'center'});
-                break;
+                }
+                if (!firstLive) firstLive = block;
             }
+        });
+
+        if (firstLive) {
+            firstLive.scrollIntoView({behavior: 'smooth', block: 'center'});
         }
     })();
     </script>
