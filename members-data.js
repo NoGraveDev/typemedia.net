@@ -7,13 +7,13 @@
  */
 
 const COUNCIL = [
-    { handle: "@rivaura", avatar: "avatars/rivaura.jpg", role: "CEO" },
-    { handle: "@luismeta", avatar: "avatars/luismeta.jpg", role: "COO" },
-    { handle: "@lil_defi", avatar: "avatars/lil_defi.jpg", role: "Council" },
-    { handle: "@coinism", avatar: "avatars/coinism.jpg", role: "Council" },
-    { handle: "@GuyTypeAura", avatar: "avatars/guytypeaura.jpg", role: "Council" },
-    { handle: "@Javimedia", avatar: "avatars/javimedia.jpg", role: "Council" },
-    { handle: "@ScadMeta", avatar: "avatars/scadmeta.jpg", role: "Council" },
+    { handle: "@rivaura", avatar: "avatars/rivaura.jpg" },
+    { handle: "@luismeta", avatar: "avatars/luismeta.jpg" },
+    { handle: "@lil_defi", avatar: "avatars/lil_defi.jpg" },
+    { handle: "@coinism", avatar: "avatars/coinism.jpg" },
+    { handle: "@GuyTypeAura", avatar: "avatars/guytypeaura.jpg" },
+    { handle: "@Javimedia", avatar: "avatars/javimedia.jpg" },
+    { handle: "@ScadMeta", avatar: "avatars/scadmeta.jpg" },
 ];
 
 const MEMBERS = [
@@ -61,15 +61,10 @@ function renderCard(m, i, isCouncil) {
     const avatarHtml = m.avatar
         ? `<img src="${m.avatar}" alt="${m.handle}" loading="lazy">`
         : `<span class="member-initial">${initial}</span>`;
-    const roleHtml = isCouncil && m.role
-        ? `<div class="member-role">${m.role}</div>`
-        : '';
-
     return `
     <a href="${xUrl}" target="_blank" class="member-card ${isCouncil ? 'council-card' : ''}" style="animation-delay: ${i * 0.04}s">
         <div class="member-avatar">${avatarHtml}</div>
         <div class="member-handle">${m.handle}</div>
-        ${roleHtml}
     </a>`;
 }
 
