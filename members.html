@@ -48,8 +48,9 @@
             margin: 0;
         }
         .council-grid {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
+            display: flex !important;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 16px;
             max-width: 900px;
             width: 100%;
@@ -59,21 +60,20 @@
         }
         @media (max-width: 700px) {
             .council-grid {
-                grid-template-columns: repeat(4, 1fr);
                 gap: 12px;
-            }
-        }
-        @media (max-width: 400px) {
-            .council-grid {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 10px;
             }
         }
         .council-card {
             border: 2px solid #111 !important;
             position: relative;
-            width: 100%;
-            margin: 0 auto;
+            width: 80px;
+            flex-shrink: 0;
+        }
+        @media (min-width: 500px) {
+            .council-card { width: 90px; }
+        }
+        @media (min-width: 700px) {
+            .council-card { width: 100px; }
         }
         .council-card .member-handle {
             font-size: 0.7rem;
