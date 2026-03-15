@@ -9,10 +9,10 @@
 const COUNCIL = [
     { handle: "@rivaura", avatar: "avatars/rivaura.jpg" },
     { handle: "@luismeta", avatar: "avatars/luismeta.jpg" },
+    { handle: "@Javimedia", avatar: "avatars/javimedia.jpg" },
     { handle: "@lil_defi", avatar: "avatars/lil_defi.jpg" },
     { handle: "@coinism", avatar: "avatars/coinism.jpg" },
     { handle: "@GuyTypeAura", avatar: "avatars/guytypeaura.jpg" },
-    { handle: "@Javimedia", avatar: "avatars/javimedia.jpg" },
     { handle: "@ScadMeta", avatar: "avatars/scadmeta.jpg" },
 ];
 
