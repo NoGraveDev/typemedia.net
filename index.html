@@ -23,6 +23,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect fill='%23111' width='32' height='32' rx='6'/><text x='16' y='22' font-size='14' font-weight='bold' text-anchor='middle' fill='%23fff'>TM</text></svg>">
     <link rel="stylesheet" href="style.css">
+    <style>
+        @media (max-width: 700px) {
+            .council-home-grid { grid-template-columns: repeat(4, 1fr) !important; }
+        }
+        @media (max-width: 400px) {
+            .council-home-grid { grid-template-columns: repeat(3, 1fr) !important; }
+        }
+    </style>
 </head>
 <body>
     <!-- Nav -->
@@ -127,7 +135,43 @@
         </div>
     </section>
 
-
+    <!-- Council -->
+    <section style="padding: 60px 0 80px; text-align: center;">
+        <div class="container">
+            <div class="section-label">LEADERSHIP</div>
+            <h2 style="font-family: var(--font-display); font-size: 28px; font-weight: 700; margin-bottom: 32px;">Type Media Council</h2>
+            <div class="council-home-grid" style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 16px; max-width: 900px; margin: 0 auto;">
+                <a href="https://x.com/rivaura" target="_blank" class="member-card" style="animation-delay: 0s">
+                    <div class="member-avatar"><img src="avatars/rivaura.jpg" alt="@rivaura" loading="lazy"></div>
+                    <div class="member-handle">@rivaura</div>
+                </a>
+                <a href="https://x.com/luismeta" target="_blank" class="member-card" style="animation-delay: 0.04s">
+                    <div class="member-avatar"><img src="avatars/luismeta.jpg" alt="@luismeta" loading="lazy"></div>
+                    <div class="member-handle">@luismeta</div>
+                </a>
+                <a href="https://x.com/lil_defi" target="_blank" class="member-card" style="animation-delay: 0.08s">
+                    <div class="member-avatar"><img src="avatars/lil_defi.jpg" alt="@lil_defi" loading="lazy"></div>
+                    <div class="member-handle">@lil_defi</div>
+                </a>
+                <a href="https://x.com/coinism" target="_blank" class="member-card" style="animation-delay: 0.12s">
+                    <div class="member-avatar"><img src="avatars/coinism.jpg" alt="@coinism" loading="lazy"></div>
+                    <div class="member-handle">@coinism</div>
+                </a>
+                <a href="https://x.com/GuyTypeAura" target="_blank" class="member-card" style="animation-delay: 0.16s">
+                    <div class="member-avatar"><img src="avatars/guytypeaura.jpg" alt="@GuyTypeAura" loading="lazy"></div>
+                    <div class="member-handle">@GuyTypeAura</div>
+                </a>
+                <a href="https://x.com/Javimedia" target="_blank" class="member-card" style="animation-delay: 0.2s">
+                    <div class="member-avatar"><img src="avatars/javimedia.jpg" alt="@Javimedia" loading="lazy"></div>
+                    <div class="member-handle">@Javimedia</div>
+                </a>
+                <a href="https://x.com/ScadMeta" target="_blank" class="member-card" style="animation-delay: 0.24s">
+                    <div class="member-avatar"><img src="avatars/scadmeta.jpg" alt="@ScadMeta" loading="lazy"></div>
+                    <div class="member-handle">@ScadMeta</div>
+                </a>
+            </div>
+        </div>
+    </section>
 
     <!-- CTA -->
     <section class="cta">
