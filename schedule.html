@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Schedule — 24/7 Spaces</title>
+    <meta name="description" content="Type Media Spaces Schedule — 24/7 live spaces hosted by the Type Media crew.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect fill='%23111' width='32' height='32' rx='6'/><text x='16' y='22' font-size='14' font-weight='bold' text-anchor='middle' fill='%23fff'>TM</text></svg>">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ── Schedule Specific Styles ── */
+        .schedule-hero {
+            text-align: center;
+            padding: 80px 20px 40px;
+        }
+        .schedule-hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            margin: 0 0 12px;
+        }
+        .schedule-hero .subtitle {
+            font-family: var(--font-body);
+            color: var(--text-2);
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
+        .schedule-hero .live-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #111;
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 100px;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            margin-top: 24px;
+        }
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            background: #00ff88;
+            border-radius: 50%;
+            animation: pulse-dot 2s ease-in-out infinite;
+        }
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.8); }
+        }
+
+        .timezone-note {
+            text-align: center;
+            padding: 0 20px 40px;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--text-3);
+            letter-spacing: 0.02em;
+        }
+
+        /* ── Timeline ── */
+        .schedule-container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 20px 80px;
+        }
+
+        .time-block {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 0;
+            position: relative;
+            min-height: 80px;
+        }
+
+        .time-label {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-2);
+            padding: 20px 0;
+            text-align: right;
+            padding-right: 24px;
+            position: relative;
+        }
+
+        .time-label::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border-strong);
+        }
+
+        .time-label .period {
+            display: block;
+            font-size: 0.7rem;
+            color: var(--text-3);
+            font-weight: 400;
+            margin-top: 2px;
+        }
+
+        .host-card {
+            padding: 16px 24px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            transition: background var(--transition);
+            text-decoration: none;
+            color: inherit;
+            position: relative;
+        }
+
+        .host-card:hover {
+            background: var(--accent-soft);
+        }
+
+        .host-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+            border: 2px solid var(--border);
+        }
+
+        .host-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .host-name {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--text);
+            line-height: 1.2;
+        }
+
+        .host-handle {
+            font-family: var(--font-mono);
+            font-size: 0.78rem;
+            color: var(--text-3);
+            margin-top: 2px;
+        }
+
+        .host-show {
+            font-family: var(--font-body);
+            font-size: 0.82rem;
+            color: var(--text-2);
+            margin-top: 4px;
+        }
+
+        .co-host-badge {
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            font-weight: 600;
+            background: var(--surface);
+            color: var(--text-2);
+            padding: 3px 8px;
+            border-radius: 100px;
+            letter-spacing: 0.03em;
+            white-space: nowrap;
+        }
+
+        .csn-badge {
+            font-family: var(--font-mono);
+            font-size: 0.6rem;
+            font-weight: 600;
+            background: #111;
+            color: #fff;
+            padding: 3px 8px;
+            border-radius: 100px;
+            letter-spacing: 0.05em;
+            white-space: nowrap;
+        }
+
+        .overlap-indicator {
+            position: absolute;
+            left: -4px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            background: #ff6b35;
+            border-radius: 50%;
+            border: 2px solid var(--bg);
+        }
+
+        /* ── Day Dividers ── */
+        .day-divider {
+            grid-column: 1 / -1;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 32px 0 16px;
+        }
+        .day-divider span {
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 0.75rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--text-3);
+            white-space: nowrap;
+        }
+        .day-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        /* ── Now Playing Highlight ── */
+        .time-block.now-playing .host-card {
+            background: rgba(0, 255, 136, 0.04);
+            border-left: 3px solid #00ff88;
+        }
+        .time-block.now-playing .time-label {
+            color: var(--text);
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 600px) {
+            .time-block {
+                grid-template-columns: 70px 1fr;
+            }
+            .time-label {
+                font-size: 0.75rem;
+                padding-right: 16px;
+            }
+            .host-card {
+                padding: 12px 16px;
+            }
+            .host-avatar {
+                width: 36px;
+                height: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Nav -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand">
+                <img src="typemedia-logo.png" alt="TM" class="nav-logo">
+                <span class="nav-title">TYPE MEDIA</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="members.html">Members</a>
+                <a href="schedule.html" class="active">Schedule</a>
+                <a href="assets.html">Assets</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="schedule-hero">
+        <h1>Type Schedule</h1>
+        <p class="subtitle">24 hours of live spaces. Every single day.</p>
+        <div class="live-badge">
+            <span class="live-dot"></span>
+            ALWAYS LIVE
+        </div>
+    </section>
+
+    <p class="timezone-note">All times EST · Daily schedule · Co-hosts marked with ↔</p>
+
+    <!-- Schedule Timeline -->
+    <div class="schedule-container">
+
+        <!-- Early Morning -->
+        <div class="day-divider"><span>Early Morning</span></div>
+
+        <div class="time-block">
+            <div class="time-label">3:00<span class="period">AM</span></div>
+            <a href="https://x.com/search?q=from%3Atypemedia+spaces" target="_blank" class="host-card">
+                <img src="avatars/placeholder-edge.jpg" class="host-avatar" alt="Edge" onerror="this.style.display='none'">
+                <div class="host-info">
+                    <div class="host-name">Edge</div>
+                    <div class="host-handle">@typemedia affiliate</div>
+                </div>
+                <span class="csn-badge">H+CSN</span>
+            </a>
+        </div>
+
+        <div class="time-block">
+            <div class="time-label">4:30<span class="period">AM</span></div>
+            <a href="https://x.com/Chuckmetax" target="_blank" class="host-card">
+                <img src="avatars/chuckmetax.jpg" class="host-avatar" alt="Chuck">
+                <div class="host-info">
+                    <div class="host-name">Chuck</div>
+                    <div class="host-handle">@Chuckmetax</div>
+                    <div class="host-show">AM Motivation</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="time-block">
+            <div class="time-label">6:00<span class="period">AM</span></div>
+            <a href="https://x.com/search?q=from%3Atypemedia+spaces" target="_blank" class="host-card">
+                <img src="avatars/placeholder-bj.jpg" class="host-avatar" alt="BJ" onerror="this.style.display='none'">
+                <div class="host-info">
+                    <div class="host-name">BJ</div>
+                    <div class="host-handle">@typemedia affiliate</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="time-block">
+            <div class="time-label">7:00<span class="period">AM</span></div>
+            <a href="https://x.com/search?q=from%3Atypemedia+spaces" target="_blank" class="host-card">
+                <img src="avatars/placeholder-vee.jpg" class="host-avatar" alt="Vee" onerror="this.style.display='none'">
+                <div class="host-info">
+                    <div class="host-name">Vee</div>
+                    <div class="host-handle">@typemedia affiliate</div>
+                </div>
+                <span class="csn-badge">H+CSN</span>
+            </a>
+        </div>
+
+        <!-- Morning -->
+        <div class="day-divider"><span>Morning</span></div>
+
+        <div class="time-block">
+            <div class="time-label">9:00<span class="period">AM</span></div>
+            <a href="https://x.com/peak_arf" target="_blank" class="host-card">
+                <img src="avatars/peak_arf.jpg" class="host-avatar" alt="Peak">
+                <div class="host-info">
+                    <div class="host-name">Peak</div>
+                    <div class="host-handle">@peak_arf</div>
+                    <div class="host-show">Type Crypto Morning 📈</div>
+                </div>
+                <span class="csn-badge">H+CSN</span>
+            </a>
+        </div>
+
+        <div class="time-block">
+            <div class="time-label">10:00<span class="period">AM</span></div>
+            <a href="https://x.com/AimDontMiss" target="_blank" class="host-card">
+                <img src="avatars/aimdontmiss.jpg" class="host-avatar" alt="Shibo / Aim">
+                <div class="host-info">
+                    <div class="host-name">Aim</div>
+                    <div class="host-handle">@AimDontMiss</div>
+                </div>
+                <span class="csn-badge">H+CSN</span>
+            </a>
+        </div>
+
+        <!-- Afternoon -->
+        <div class="day-divider"><span>Afternoon</span></div>
+
+        <div class="time-block">
+            <div class="time-label">12:00<span class="period">PM</span></div>
+            <a href="https://x.com/lil_defi" target="_blank" class="host-card">
+                <img src="avatars/lil_defi.jpg" class="host-avatar" alt="Cake & Defi">
+                <div class="host-info">
+                    <div class="host-name">Cake ↔ Defi</div>
+                    <div class="host-handle">@lil_defi</div>
+                </div>
+                <span class="co-host-badge">CO-HOST</span>
+                <span class="csn-badge">H+CSN</span>
+            </a>
+        </div>
+
+        <div class="time-block">
+            <div class="time-label">1:00<span class="period">PM</span></div>
+            <a href="https://x.com/GuyTypeAura" target="_blank" class="host-card">
+                <img src="avatars/guytypeaura.jpg" class="host-avatar" alt="Guy">
+                <div class="host-info">
+                    <div class="host-name">Guy</div>
+                    <div class="host-handle">@GuyTypeAura</div>
+                    <div class="host-show">Come Face Your Fears</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="time-block">
+            <div class="time-label">2:00<span class="period">PM</span></div>
+            <a href="https://x.com/search?q=from%3Atypemedia+spaces" target="_blank" class="host-card">
+                <img src="avatars/placeholder-shield.jpg" class="host-avatar" alt="Shield" onerror="this.style.display='none'">
+                <div class="host-info">
+                    <div class="host-name">Shield</div>
+                    <div class="host-handle">@typemedia affiliate</div>
+                </div>
+                <span class="csn-badge">H+CSN</span>
+            </a>
+        </div>
+
+        <div class="time-block">
+            <div class="time-label">3:00<span class="period">PM</span></div>
+            <a href="https://x.com/baileycMETA" target="_blank" class="host-card">
+                <img src="avatars/baileycmeta.jpg" class="host-avatar" alt="Goose & Bailey">
+                <div class="host-info">
+                    <div class="host-name">Goose ↔ Bailey</div>
+                    <div class="host-handle">@baileycMETA</div>
+                </div>
+                <span class="co-host-badge">CO-HOST</span>
+            </a>
+        </div>
+
+        <div class="time-block">
+            <div class="time-label">4:00<span class="period">PM</span></div>
+            <a href="https://x.com/gruvemeta" target="_blank" class="host-card">
+                <img src="avatars/gruvemeta.jpg" class="host-avatar" alt="Gruve">
+                <div class="host-info">
+                    <div class="host-name">Gruve</div>
+                    <div class="host-handle">@gruvemeta</div>
+                </div>
+                <span class="csn-badge">H+CSN</span>
+            </a>
+        </div>
+
+        <div class="time-block">
+            <div class="time-label">5:00<span class="period">PM</span></div>
+            <a href="https://x.com/search?q=from%3Atypemedia+spaces" target="_blank" class="host-card">
+                <img src="avatars/placeholder-bark.jpg" class="host-avatar" alt="Bark" onerror="this.style.display='none'">
+                <div class="host-info">
+                    <div class="host-name">Bark</div>
+                    <div class="host-handle">@typemedia affiliate</div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Evening -->
+        <div class="day-divider"><span>Evening</span></div>
+
+        <div class="time-block">
+            <div class="time-label">7:00<span class="period">PM</span></div>
+            <a href="https://x.com/Mavmetax" target="_blank" class="host-card">
+                <img src="avatars/mavmetax.jpg" class="host-avatar" alt="Mav">
+                <div class="host-info">
+                    <div class="host-name">Mav</div>
+                    <div class="host-handle">@Mavmetax</div>
+                    <div class="host-show">Tailspin 🐶</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="time-block">
+            <div class="time-label">8:00<span class="period">PM</span></div>
+            <a href="https://x.com/mellowmeta" target="_blank" class="host-card">
+                <img src="avatars/mellowmeta.jpg" class="host-avatar" alt="Mellow & Scad">
+                <div class="host-info">
+                    <div class="host-name">Mellow ↔ Scad</div>
+                    <div class="host-handle">@mellowmeta · @ScadMeta</div>
+                </div>
+                <span class="co-host-badge">CO-HOST</span>
+            </a>
+        </div>
+
+        <div class="time-block">
+            <div class="time-label">9:00<span class="period">PM</span></div>
+            <a href="https://x.com/Javimedia" target="_blank" class="host-card">
+                <img src="avatars/javimedia.jpg" class="host-avatar" alt="Javi & DJ">
+                <div class="host-info">
+                    <div class="host-name">Javi ↔ DJ</div>
+                    <div class="host-handle">@Javimedia · @DJAlevy8</div>
+                </div>
+                <span class="co-host-badge">CO-HOST</span>
+            </a>
+        </div>
+
+        <!-- Late Night -->
+        <div class="day-divider"><span>Late Night</span></div>
+
+        <div class="time-block">
+            <div class="time-label">10:30<span class="period">PM</span></div>
+            <a href="https://x.com/rivaura" target="_blank" class="host-card">
+                <img src="avatars/rivaura.jpg" class="host-avatar" alt="Riv">
+                <div class="host-info">
+                    <div class="host-name">Riv</div>
+                    <div class="host-handle">@rivaura</div>
+                    <div class="host-show">CEO · Type Media</div>
+                </div>
+                <span class="csn-badge">H+CSN</span>
+            </a>
+        </div>
+
+        <div class="time-block">
+            <div class="time-label">12:00<span class="period">AM</span></div>
+            <a href="https://x.com/luismeta" target="_blank" class="host-card">
+                <img src="avatars/luismeta.jpg" class="host-avatar" alt="Luis">
+                <div class="host-info">
+                    <div class="host-name">Luis</div>
+                    <div class="host-handle">@luismeta</div>
+                    <div class="host-show">COO · Type Media</div>
+                </div>
+                <span class="csn-badge">H+CSN</span>
+            </a>
+        </div>
+
+        <div class="time-block">
+            <div class="time-label">1:30<span class="period">AM</span></div>
+            <a href="https://x.com/Ajmetax" target="_blank" class="host-card">
+                <img src="avatars/ajmetax.jpg" class="host-avatar" alt="AJ">
+                <div class="host-info">
+                    <div class="host-name">AJ</div>
+                    <div class="host-handle">@Ajmetax</div>
+                </div>
+            </a>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer style="text-align:center; padding: 40px 20px 60px; border-top: 1px solid var(--border);">
+        <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-3);">
+            TYPE MEDIA © 2026 · <a href="https://x.com/typemedia" target="_blank" style="color: var(--text-2);">@typemedia</a> · <a href="https://discord.gg/typemedia" target="_blank" style="color: var(--text-2);">Discord</a>
+        </p>
+    </footer>
+
+</body>
+</html>
