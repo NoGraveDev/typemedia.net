@@ -10,6 +10,53 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect fill='%23111' width='32' height='32' rx='6'/><text x='16' y='22' font-size='14' font-weight='bold' text-anchor='middle' fill='%23fff'>TM</text></svg>">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .council-section {
+            max-width: var(--max-w, 1140px);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin: 0 0 6px;
+        }
+        .section-subtitle {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.9rem;
+            color: #999;
+            margin: 0;
+        }
+        .council-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+            gap: 16px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .council-card {
+            border: 2px solid #111 !important;
+            position: relative;
+        }
+        .council-card:hover {
+            border-color: #333 !important;
+        }
+        .member-role {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.6rem;
+            font-weight: 600;
+            color: #999;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+    </style>
 </head>
 <body>
     <!-- Nav -->
@@ -43,6 +90,7 @@
     <div class="mobile-menu">
         <a href="index.html" class="mobile-link">Home</a>
         <a href="members.html" class="mobile-link active">Members</a>
+        <a href="schedule.html" class="mobile-link">Schedule</a>
         <a href="assets.html" class="mobile-link">Assets</a>
         <div class="mobile-socials">
             <a href="https://x.com/typemedia" target="_blank">X / Twitter</a>
