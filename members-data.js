@@ -51,6 +51,10 @@ const MEMBERS = [
     { handle: "@MilkMetax", avatar: "avatars/milkmetax.jpg" },
     { handle: "@realmjmetax", avatar: "avatars/realmjmetax.jpg" },
     { handle: "@GirlKageX", avatar: "avatars/girlkagex.jpg" },
+    { handle: "@slickmetax", avatar: "avatars/slickmetax.jpg" },
+    { handle: "@corey_on_x", avatar: "avatars/corey_on_x.jpg" },
+    { handle: "@chaxaurax", avatar: "avatars/chaxaurax.jpg" },
+    { handle: "@Bjaura", avatar: "" },
 ];
 
 // ── Render Functions ──────────────────────────────────
