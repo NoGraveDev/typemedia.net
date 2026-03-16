@@ -1,7 +1,7 @@
 /*
  * ASSETS DATA - Type Media Treasury
  * Wallet: DLD7uMv9nMgKVECRgurTisAyTb19X3Tmjv
- * Source: doggy.market NFTs tab
+ * Source: market.doginaldogs.com
  */
 
 const TREASURY_DOGS = [
@@ -58,7 +58,7 @@ function renderAssets() {
     if (rarestEl) rarestEl.textContent = '#' + Math.min(...TREASURY_DOGS.map(d => d.id));
 
     grid.innerHTML = TREASURY_DOGS.map((dog, i) => {
-        const marketUrl = `https://doggy.market/inscription/${dog.inscription}`;
+        const marketUrl = `https://market.doginaldogs.com/inscription/${dog.inscription}`;
         return `
         <a href="${marketUrl}" target="_blank" class="asset-card" style="animation-delay: ${i * 0.05}s">
             <div class="asset-img-wrap">
