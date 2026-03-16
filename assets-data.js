@@ -23,6 +23,21 @@ const TREASURY_DOGS = [
     { id: 8096, inscription: "9f8ff59c9cf61fae26186badd7bcc71f2a5d3dd7e1e645fbd2d12867b37abda3i0", number: 61357968 },
 ];
 
+/*
+ * SEAL NFT COLLECTION - XRPL
+ * Wallet: rwerjx1ZrbQMXbcorEfizrGm22j9WGbPea
+ * Issuer: rHW3Wa9zhJ5BWzKAushDHnjctqeo5CvnFD
+ * Source: xrp.cafe
+ */
+const TREASURY_SEALS = [
+    { id: 102, rarity: 564, image: "seals/seal-102.png" },
+    { id: 114, rarity: 379, image: "seals/seal-114.png" },
+    { id: 170, rarity: 484, image: "seals/seal-170.png" },
+    { id: 523, rarity: 694, image: "seals/seal-523.png" },
+    { id: 610, rarity: 663, image: "seals/seal-610.png" },
+    { id: 889, rarity: 843, image: "seals/seal-889.png" },
+];
+
 // ── Render Assets ──────────────────────────────────
 function renderAssets() {
     const grid = document.getElementById('assetsGrid');
@@ -57,4 +72,35 @@ function renderAssets() {
     }).join('');
 }
 
-document.addEventListener('DOMContentLoaded', renderAssets);
+function renderSeals() {
+    const section = document.getElementById('sealsSection');
+    const grid = document.getElementById('sealsGrid');
+    const totalEl = document.getElementById('totalSeals');
+    const rarestEl = document.getElementById('rarestSeal');
+
+    if (!grid || !section) return;
+
+    section.style.display = 'block';
+
+    if (totalEl) totalEl.textContent = TREASURY_SEALS.length;
+    if (rarestEl) rarestEl.textContent = '#' + Math.min(...TREASURY_SEALS.map(s => s.rarity));
+
+    grid.innerHTML = TREASURY_SEALS.map((seal, i) => {
+        const marketUrl = `https://xrp.cafe/usercollection/rwerjx1ZrbQMXbcorEfizrGm22j9WGbPea/rHW3Wa9zhJ5BWzKAushDHnjctqeo5CvnFD/1`;
+        return `
+        <a href="${marketUrl}" target="_blank" class="asset-card" style="animation-delay: ${i * 0.05}s">
+            <div class="asset-img-wrap">
+                <img src="${seal.image}" alt="SEAL #${seal.id}" loading="lazy" class="asset-img" style="image-rendering: auto;">
+            </div>
+            <div class="asset-info">
+                <div class="asset-name">SEAL #${seal.id}</div>
+                <div class="asset-meta">Rarity ${seal.rarity}</div>
+            </div>
+        </a>`;
+    }).join('');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    renderAssets();
+    renderSeals();
+});
