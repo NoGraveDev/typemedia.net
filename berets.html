@@ -292,11 +292,18 @@
             }
         });
 
-        // Convert to array and sort by beret count (descending), then Type members first
+        // Custom rank priority (higher = ranked first among ties)
+        const rankPriority = {'rivaura':10,'gruvemeta':9};
+
+        // Convert to array and sort by beret count (descending), then priority, then Type members first
         const owners = Object.values(ownerMap).sort((a, b) => {
             // Sort by count first
             const countDiff = b.dogs.length - a.dogs.length;
             if (countDiff !== 0) return countDiff;
+            // Then by custom priority
+            const pa = rankPriority[a.xHandle] || 0;
+            const pb = rankPriority[b.xHandle] || 0;
+            if (pa !== pb) return pb - pa;
             // Then Type members first
             if (a.isTypeMember !== b.isTypeMember) return a.isTypeMember ? -1 : 1;
             // Then alphabetical
