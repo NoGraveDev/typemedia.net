@@ -114,14 +114,13 @@
         }
         .owner-badge {
             display: inline-block;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.55rem;
-            color: #1d9bf0;
-            background: rgba(29,155,240,0.08);
-            padding: 2px 6px;
+            width: 18px;
+            height: 18px;
             border-radius: 4px;
             margin-left: 6px;
             vertical-align: middle;
+            position: relative;
+            top: -1px;
         }
         .owner-dogs {
             display: flex;
@@ -315,7 +314,7 @@
             row.className = 'owner-row';
             row.style.animationDelay = (i * 0.04) + 's';
 
-            const badge = owner.isTypeMember ? '<span class="owner-badge">TYPE</span>' : '';
+            const badge = owner.isTypeMember ? '<img src="logo.png" alt="Type Media" class="owner-badge">' : '';
             const countLabel = owner.dogs.length === 1 ? '1 beret' : owner.dogs.length + ' berets';
 
             const dogsHTML = owner.dogs.map(d => {
