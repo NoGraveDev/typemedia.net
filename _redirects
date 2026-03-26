@@ -1,0 +1,6 @@
+# Block sensitive files - redirect to home
+/server.js /index.html 200
+/package.json /index.html 200
+/package-lock.json /index.html 200
+/.gitignore /index.html 200
+/.env /index.html 200

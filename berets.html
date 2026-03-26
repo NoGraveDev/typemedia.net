@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Berets | Type Media</title>
+    <meta name="description" content="Berets are the face of Type.">
+    <meta property="og:title" content="Type Berets | Type Media">
+    <meta property="og:description" content="Beret Dogs held by Type Media badge holders. On-chain pixel art on Dogecoin.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://typemedia.net/berets">
+    <meta property="og:image" content="https://typemedia.net/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Type Media">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@typemedia">
+    <meta name="twitter:title" content="Type Berets | Type Media">
+    <meta name="twitter:description" content="Beret Dogs held by Type Media badge holders. On-chain pixel art on Dogecoin.">
+    <meta name="twitter:image" content="https://typemedia.net/og-image.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png"><link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .assets-stats {
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            margin-top: 24px;
+            flex-wrap: wrap;
+        }
+        .asset-stat {
+            text-align: center;
+        }
+        .asset-stat-value {
+            display: block;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+        }
+        .asset-stat-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: #999;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        /* Owner rank list */
+        .owners-list {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px 60px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .owner-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px 20px;
+            background: #fafafa;
+            border: 1px solid #eee;
+            border-radius: 14px;
+            transition: all 0.2s ease;
+            animation: fadeUp 0.4s ease both;
+        }
+        .owner-row:hover {
+            border-color: #ddd;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+        }
+        .owner-rank {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: #bbb;
+            min-width: 24px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+        .owner-pfp {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 2px solid #eee;
+            flex-shrink: 0;
+            object-fit: cover;
+        }
+        .owner-info {
+            flex: 1;
+            min-width: 0;
+        }
+        .owner-handle {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #222;
+        }
+        .owner-handle a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .owner-handle a:hover {
+            color: #1d9bf0;
+        }
+        .owner-count {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            color: #999;
+            margin-top: 2px;
+        }
+        .owner-badge {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.55rem;
+            color: #1d9bf0;
+            background: rgba(29,155,240,0.08);
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-left: 6px;
+            vertical-align: middle;
+        }
+        .owner-dogs {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+        .owner-dog-thumb {
+            width: 48px;
+            height: 48px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #eee;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+        .owner-dog-thumb:hover {
+            transform: scale(1.1);
+            border-color: #ccc;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .owner-dog-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            image-rendering: pixelated;
+        }
+        .owner-dog-thumb .dog-id {
+            display: none;
+        }
+
+        /* Tooltip on hover */
+        .owner-dog-thumb {
+            position: relative;
+        }
+        .owner-dog-thumb:hover .dog-id {
+            display: block;
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.55rem;
+            color: #666;
+            white-space: nowrap;
+            background: #fff;
+            padding: 1px 5px;
+            border-radius: 4px;
+            border: 1px solid #eee;
+            z-index: 10;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 700px) {
+            .owner-row {
+                flex-wrap: wrap;
+                gap: 12px;
+                padding: 14px 16px;
+            }
+            .owner-pfp {
+                width: 36px;
+                height: 36px;
+            }
+            .owner-dogs {
+                width: 100%;
+                justify-content: flex-start;
+                margin-top: 4px;
+            }
+            .owner-dog-thumb {
+                width: 40px;
+                height: 40px;
+            }
+            .owner-rank {
+                min-width: 18px;
+                font-size: 0.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Nav -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <img src="logo.jpg" alt="Type Media" style="height:28px;width:28px;border-radius:6px;">
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="members.html" class="nav-link">Members</a>
+                <a href="schedule.html" class="nav-link">Schedule</a>
+                <a href="assets.html" class="nav-link">Assets</a>
+                <a href="berets.html" class="nav-link active">Type Berets</a>
+            </div>
+            <div class="nav-socials">
+                <a href="https://x.com/typemedia" target="_blank" class="nav-social" aria-label="X/Twitter">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <a href="https://discord.gg/typemedia" target="_blank" class="nav-social" aria-label="Discord">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
+                </a>
+            </div>
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="index.html" class="mobile-link">Home</a>
+        <a href="members.html" class="mobile-link">Members</a>
+        <a href="schedule.html" class="mobile-link">Schedule</a>
+        <a href="assets.html" class="mobile-link">Assets</a>
+        <a href="berets.html" class="mobile-link active">Type Berets</a>
+        <div class="mobile-socials">
+            <a href="https://x.com/typemedia" target="_blank">X / Twitter</a>
+            <a href="https://discord.gg/typemedia" target="_blank">Discord</a>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="section-label">BERET COLLECTION</div>
+            <h1 class="page-title">Type Berets</h1>
+            <p class="page-desc">Berets are the face of Type.</p>
+
+            <div class="assets-stats">
+                <div class="asset-stat">
+                    <span class="asset-stat-value" id="totalBerets">—</span>
+                    <span class="asset-stat-label">Beret Dogs</span>
+                </div>
+                <div class="asset-stat">
+                    <span class="asset-stat-value" id="totalHolders">—</span>
+                    <span class="asset-stat-label">Holders</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Owner Rank Listing -->
+    <section>
+        <div class="owners-list" id="ownersList"></div>
+    </section>
+
+    <script src="berets-data.js"></script>
+    <script>
+        // Group berets by owner
+        const ownerMap = {};
+        BERETS.forEach(b => {
+            if (!ownerMap[b.xHandle]) {
+                ownerMap[b.xHandle] = {
+                    xHandle: b.xHandle,
+                    displayName: b.displayName,
+                    avatarUrl: b.avatarUrl,
+                    isTypeMember: b.isTypeMember,
+                    dogs: []
+                };
+            }
+            ownerMap[b.xHandle].dogs.push(b);
+            // Use the first entry's avatar that has a real avatar (not a dog fallback)
+            if (b.avatarUrl.includes('avatars/')) {
+                ownerMap[b.xHandle].avatarUrl = b.avatarUrl;
+            }
+        });
+
+        // Convert to array and sort by beret count (descending), then Type members first
+        const owners = Object.values(ownerMap).sort((a, b) => {
+            // Sort by count first
+            const countDiff = b.dogs.length - a.dogs.length;
+            if (countDiff !== 0) return countDiff;
+            // Then Type members first
+            if (a.isTypeMember !== b.isTypeMember) return a.isTypeMember ? -1 : 1;
+            // Then alphabetical
+            return a.xHandle.localeCompare(b.xHandle);
+        });
+
+        // Stats
+        document.getElementById('totalBerets').textContent = BERETS.length;
+        document.getElementById('totalHolders').textContent = owners.length;
+
+        // Render owner rows
+        const list = document.getElementById('ownersList');
+        owners.forEach((owner, i) => {
+            const row = document.createElement('div');
+            row.className = 'owner-row';
+            row.style.animationDelay = (i * 0.04) + 's';
+
+            const badge = owner.isTypeMember ? '<span class="owner-badge">TYPE</span>' : '';
+            const countLabel = owner.dogs.length === 1 ? '1 beret' : owner.dogs.length + ' berets';
+
+            const dogsHTML = owner.dogs.map(d => {
+                const marketUrl = 'https://market.doginaldogs.com/inscription/' + d.inscriptionId;
+                return `<a href="${marketUrl}" target="_blank" rel="noopener" class="owner-dog-thumb" title="Dog #${d.dogId}">
+                    <img src="https://market.doginaldogs.com/dogs/${d.dogId}.png" alt="#${d.dogId}" loading="lazy">
+                    <span class="dog-id">#${d.dogId}</span>
+                </a>`;
+            }).join('');
+
+            row.innerHTML = `
+                <span class="owner-rank">${i + 1}</span>
+                <img src="${owner.avatarUrl}" alt="${owner.displayName}" class="owner-pfp" onerror="this.src='https://market.doginaldogs.com/dogs/${owner.dogs[0].dogId}.png'">
+                <div class="owner-info">
+                    <div class="owner-handle"><a href="https://x.com/${owner.xHandle}" target="_blank">@${owner.xHandle}</a>${badge}</div>
+                    <div class="owner-count">${countLabel}</div>
+                </div>
+                <div class="owner-dogs">${dogsHTML}</div>
+            `;
+            list.appendChild(row);
+        });
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>

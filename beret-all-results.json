@@ -1,0 +1,911 @@
+[
+  {
+    "dogId": 58,
+    "inscriptionId": "876d829abebcf1aa84174346c36995fd9da8e8c616474f8f8ebe47b4d5991f11i0",
+    "ownerAddress": "DTdKmg3kgJGSKugmf4rhcSP5n7igKyx2vD",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 104,
+    "inscriptionId": "f2aba319b6bcbc18ec2cf64205e62af540eab066cbf2276b7f49056d4f820457i0",
+    "ownerAddress": "DG4ysjrui4gyHzwUjzFKcLRZ4B4ccEeZ9p",
+    "xHandle": "rivaura",
+    "displayName": "Riv",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1991853857383518208/g8oPBl10_400x400.jpg",
+    "isTypeMember": true
+  },
+  {
+    "dogId": 156,
+    "inscriptionId": "4d5329d571db8819cce68be92b7d6c04f9bfb4fc6af76fab01972b7e3b030e10i0",
+    "ownerAddress": "DKtA62AGaRqHdZftPBNaNH5B6KKye3gaXj",
+    "xHandle": "Boxmeta",
+    "displayName": "Box",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1990085882330963968/xuG2GG02_400x400.jpg",
+    "isTypeMember": false
+  },
+  {
+    "dogId": 249,
+    "inscriptionId": "ceebfc156c1aa0d2e40fbc03d451c27e8e2da44bbbc748858ea35f839addbf6ai0",
+    "ownerAddress": "D9kqKy78gcMqkjWmnoYP8oU4K1RBEfnfcY",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 254,
+    "inscriptionId": "efb38f2e95df64f1f841aea5a87bc0a09e56c7ff1af8dff23af65129fa07a017i0",
+    "ownerAddress": "D7S85PpBt2PaHEkMztaZf1dttRnuwrV11z",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 359,
+    "inscriptionId": "6c6f25b988d503943d5b59d312e889ae4ad8f7fb7bb1e78cbeeb1e90a310cbcei0",
+    "ownerAddress": "DRxwyLMyFs3RkZBvw7PyBWNj7WmK75Dmqf",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 369,
+    "inscriptionId": "63f97f4a7c9031e270f9ed1b37afa9da287cc816a0d6dd190cdfa11f6cfd902di0",
+    "ownerAddress": "D8fnE4xChQGtAfxfaRXeTUarccXoaQjmVe",
+    "xHandle": "baileycMETA",
+    "displayName": "Bailey",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1992421907530940417/Tgl1gA8O_400x400.jpg",
+    "isTypeMember": true
+  },
+  {
+    "dogId": 414,
+    "inscriptionId": "8af4a4e03653d7acb9ad0db8188b437eb3501d5e39785474cb7be6a73a072914i0",
+    "ownerAddress": "DNb8jP7SsodAkJcPbcjML4HMD5DMzKYMPw",
+    "xHandle": "ThunderAuraX",
+    "displayName": "Thunder",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1995726076278886400/2pPw1NfH_400x400.jpg",
+    "isTypeMember": true
+  },
+  {
+    "dogId": 607,
+    "inscriptionId": "c8df2698c5a4120a90f81c48049888b144d107a2eaa317f3cc52bcd28832d91fi0",
+    "ownerAddress": "DNMt28a5G2cnER1nJRE5VXJeAYG4RxzHER",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 651,
+    "inscriptionId": "e34d3983dc91c9abe49999f29a3b276149e6f14107ea52384076c0e0f6011eb5i0",
+    "ownerAddress": "DSrNRdnd8YhaK6h2zANKthZJgjgb3P1no8",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 767,
+    "inscriptionId": "de0bc837e92066108eae6840cd3131f48600c7acf274f9ec63c61e101b9b7847i0",
+    "ownerAddress": "DLxrb3SYDowcdy6wM1jFbTJhPrGqXgvQbS",
+    "xHandle": "Toddmetax",
+    "displayName": "Todd",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1903952835496275968/2XGmnQZH_400x400.jpg",
+    "isTypeMember": false
+  },
+  {
+    "dogId": 864,
+    "inscriptionId": "ae8227d4cba5e4ac97616b073805b52c26e2854bd84c390b5e46eb006621fcbdi0",
+    "ownerAddress": "DRTaaDcdnJF9sT9CurTFD23TuXhx7k376b",
+    "xHandle": "ROSEMETAX",
+    "displayName": "ROSE",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1997937891327062016/Yj2Y_yMx_400x400.jpg",
+    "isTypeMember": false
+  },
+  {
+    "dogId": 934,
+    "inscriptionId": "a72e650ab39ec52741c5acc41c850433d667bc17102280a14f6cfe148647debdi0",
+    "ownerAddress": "DC4mrD61VR9TnrBBC7XV6nHDfFyKL12vSW",
+    "xHandle": "rivermetax",
+    "displayName": "rivermetax",
+    "avatarUrl": "",
+    "isTypeMember": false
+  },
+  {
+    "dogId": 1142,
+    "inscriptionId": "f897283fa45654dde195e50b47351eb4ecd37f59816a75ac53cbe01c9f606c31i0",
+    "ownerAddress": "DAHJqgLv7rLVDLtoWhvLNjLT2TFLCMhN7j",
+    "xHandle": "Boostmetax",
+    "displayName": "Boost",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1977395840441626624/ZrxJqGw9_400x400.jpg",
+    "isTypeMember": false
+  },
+  {
+    "dogId": 1326,
+    "inscriptionId": "def1cda475db933024b90eb9b3daa52c373b652aa20211db3e50f70f9ff571aei0",
+    "ownerAddress": "D7eUYKYxYZsUtMxWnrqaJCoBpZXEDbVabS",
+    "xHandle": "SteezType",
+    "displayName": "Steez",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1991437691079041024/jgG3d8nv_400x400.jpg",
+    "isTypeMember": true
+  },
+  {
+    "dogId": 1386,
+    "inscriptionId": "2c483de7c5a5983fa28a18fed9fd307abdbeefc436d5f1aeb8274aafa3a225eei0",
+    "ownerAddress": "D9mLUgSDgod2DaSN9n8FQJnqAfynxzPVhQ",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 1474,
+    "inscriptionId": "6867763f5846f08e4918a7d41c9008de1fbd544286803a9fc1a04fc16daf82a2i0",
+    "ownerAddress": "DEcZHL1rXK8sz4pXxzBcgCMeTrbh2MiYio",
+    "xHandle": "HawaiiSol",
+    "displayName": "Hawaii",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1990876495565455360/TiGBQ4dO_400x400.jpg",
+    "isTypeMember": false
+  },
+  {
+    "dogId": 1484,
+    "inscriptionId": "dce9be3f16a7d0bc41012343332a30599ebc944f673a660197f02807e48753a2i0",
+    "ownerAddress": "DU4gPwsKEz3AHujC3EzQLf2En7yM6zedGa",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 1529,
+    "inscriptionId": "d076753d73c698ece94b84210eebe52e3b6da340c6518557d8b3282bbe8a3630i0",
+    "ownerAddress": "DHLcYhLr5pFXhd8a9HfVGhg4EQanS8Vkna",
+    "xHandle": "Duvalx",
+    "displayName": "Duval",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1998917137528758272/lXtxPLko_400x400.jpg",
+    "isTypeMember": false
+  },
+  {
+    "dogId": 1732,
+    "inscriptionId": "e0ff43c215d9448ba22d4ddd69782c11f958453edf6fe9bc7842b945477ec8b5i0",
+    "ownerAddress": "DDDjLCDgXjzuJd2vqU9V4sE4BrsQ7bF3bX",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 1747,
+    "inscriptionId": "d6c1a8f7fddc8b1d737632710831afaf77e3d8045425ae3abec392bfeb558a92i0",
+    "ownerAddress": "DRHd5cQe1MjYYgurTfSdpw3yJpHscrbEzX",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 1916,
+    "inscriptionId": "9fcce825b36cd96f5b432ba7732d4dd56fbb82ab35db85bcef5db1d64a886350i0",
+    "ownerAddress": "DTvBPQhE1a2HGa8jbHHpLsEhxbxfnL2k78",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 2796,
+    "inscriptionId": "8ec864aeda53986497a20dc97f1e32c57d7e5df544def03e826b805735d28477i0",
+    "ownerAddress": "DTfjPRpoGhTjYkUXJiW3krkJxWVphmoRxj",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 2836,
+    "inscriptionId": "c68190a240f8f072915d338da13ccbf97e90c00ed8509afb5d81d938b85f1d51i0",
+    "ownerAddress": "DPCpGi9uvqSEyRHPkcpsuqSRjfG13FhqNm",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 3016,
+    "inscriptionId": "8b3f4e0dfd308f71256d0744b7fe423a31845e94eff66b6acca5d96ed02ff2fei0",
+    "ownerAddress": "DCb4vTpGStoQXhoauc5B77JoTkVcVWEBaU",
+    "xHandle": "Pixiemetax1",
+    "displayName": "Pixie",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1986862146899120128/3RjT36Y2_400x400.jpg",
+    "isTypeMember": true
+  },
+  {
+    "dogId": 3118,
+    "inscriptionId": "fb42aa01c781e82d233b8278f8b7aa41662e8085df99416b2b97ead0b0b7a93fi0",
+    "ownerAddress": "DLkYVRyDcM71NRtRw7d56syyx1sVv6joZV",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 3121,
+    "inscriptionId": "b7f657f0ee172486826bfe0ef4bbf7c5e998ea4f09b0d9e809c0854f53b8c5c7i0",
+    "ownerAddress": "DTgG8nyvTGa34Yte1x5DcaSbyYz563517h",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 3309,
+    "inscriptionId": "a423ceee7b94ae5b7ab17fb1bab8af826fc77422133f272968e1bb0dd173e232i0",
+    "ownerAddress": "DJL68ouFnbT9U1qXLQ9vWEzCGMVkwQzcSx",
+    "xHandle": "lil_defi",
+    "displayName": "Defi",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1991945169973788672/PKEYo6La_400x400.jpg",
+    "isTypeMember": true
+  },
+  {
+    "dogId": 3372,
+    "inscriptionId": "e5731d1157a2d3d998ed80e3496c8f31bee9ef27108c880ae2a717ab612dd995i0",
+    "ownerAddress": "DS5WtX6TuA3iWz17BJsKTpx6WCRVSN2A6G",
+    "xHandle": "Huba2222",
+    "displayName": "Huba",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1984620907810471940/Yl2xttkb_400x400.jpg",
+    "isTypeMember": false
+  },
+  {
+    "dogId": 3411,
+    "inscriptionId": "48dcec9949da988ef8f4a4ec3d0d8f6e0e665c228b05cccdf50a8b570f403ea3i0",
+    "ownerAddress": "D7UTG6zo4ViBSzBB9LvgJm9F2Q1BDATPek",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 3459,
+    "inscriptionId": "385b110aa54a292a9b55725902a022f85ef2a7bed4d31a141141af8165916d74i0",
+    "ownerAddress": "DS8zikyEP8TwD4gT5Ws6XpDtB6vZTcGyPq",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 3532,
+    "inscriptionId": "4bb57859d936f78e56f5276a2ee5d1d073358a970200669b45a5d730e8cfbf7ci0",
+    "ownerAddress": "DHLcYhLr5pFXhd8a9HfVGhg4EQanS8Vkna",
+    "xHandle": "Duvalx",
+    "displayName": "Duval",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1998917137528758272/lXtxPLko_400x400.jpg",
+    "isTypeMember": false
+  },
+  {
+    "dogId": 3534,
+    "inscriptionId": "5012846ae8630f14fb6ddb1c24560ca3ed42f3910dbd8460f2adc768be92d0aci0",
+    "ownerAddress": "DJL68ouFnbT9U1qXLQ9vWEzCGMVkwQzcSx",
+    "xHandle": "lil_defi",
+    "displayName": "Defi",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1991945169973788672/PKEYo6La_400x400.jpg",
+    "isTypeMember": true
+  },
+  {
+    "dogId": 3556,
+    "inscriptionId": "4345dbfb6b701d3c733a6bf15631058a3e19a8f5031a0e6bff371d4db42b1c23i0",
+    "ownerAddress": "DDbnxuP6obn15xaMBQX9zZCpXPZMi3hVbB",
+    "xHandle": "HanzometaX",
+    "displayName": "Hanzo",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/2001672159219863552/pe0yNxbR_400x400.jpg",
+    "isTypeMember": false
+  },
+  {
+    "dogId": 3687,
+    "inscriptionId": "14748c8e72869283ce65a9a9dc3860f433e9961a611964dee4cb0d0629aeb5c8i0",
+    "ownerAddress": "DLuvDKNu2Cvan5SX5YwoY7SK6VHhuwEnjD",
+    "xHandle": "emeta777",
+    "displayName": "E",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1991352248027279361/wAmOrDdD_400x400.jpg",
+    "isTypeMember": true
+  },
+  {
+    "dogId": 3868,
+    "inscriptionId": "9058cf62d7ba88a2bca004bb3dea01a980914716db32976a4fe5e6702f341e36i0",
+    "ownerAddress": "DN1FGkPJKYXGGbP7RhrsuARvQuvVHCtCPh",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 4171,
+    "inscriptionId": "2e4e794c020300ce68d4aa413f8db028faee596cb9a096d6287dfd309bcdcd3fi0",
+    "ownerAddress": "DRJwEDjuJ2igL2YFDrrQeSRBu2wtzAogRz",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 4207,
+    "inscriptionId": "18d5c9e647d9ae9ef76b96415fa348deee52a5cc242e3dca0ca162b360bb44fdi0",
+    "ownerAddress": "DDkRkKEbGnaACkDzQNzFWaPkexk5tB2xqJ",
+    "xHandle": "Chuckmetax",
+    "displayName": "Chuck",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1991074732968439808/3B2S843q_400x400.jpg",
+    "isTypeMember": true
+  },
+  {
+    "dogId": 4246,
+    "inscriptionId": "6488706a2103fe78372ad8425d431b9d09b70025e48150b5fc11d9f118075ae8i0",
+    "ownerAddress": "DJDsS3zzdiRNVoVo7bFQmNPJs2ejqtTMX6",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 4391,
+    "inscriptionId": "ac46b80d43f36be9535d6972a53a62f2a7ccd10d10d7a48522a8e487b803a324i0",
+    "ownerAddress": "D6V2ATCLFw5NGBmUFiADBhjVey2h72PUWF",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 4514,
+    "inscriptionId": "835776836d240beb58d4886128ee4d1fdedba119852f9a12acb7997df6b63c30i0",
+    "ownerAddress": "DNeSRkEL9jRmqJp8YagueXgxsq3qo3koKV",
+    "xHandle": "Frostmetax",
+    "displayName": "Frost",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1985151502210781185/iV6bp8GA_400x400.jpg",
+    "isTypeMember": false
+  },
+  {
+    "dogId": 4610,
+    "inscriptionId": "18514210c451cf789bba418140815a00b2a3b4c713617ebc0fc844d5998aaca6i0",
+    "ownerAddress": "DStKUAm3SgH4TAQZd8FHdL3kguTMY11Mbs",
+    "xHandle": "SwitchMetaX",
+    "displayName": "Switch",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/2015928949612695552/ysXL8Ff9_400x400.jpg",
+    "isTypeMember": true
+  },
+  {
+    "dogId": 4724,
+    "inscriptionId": "8dee498f835ab3d1219b521e850a4183d22a3d8225fefad4caea8ea6a9ca4edfi0",
+    "ownerAddress": "DM3bsaqxoGP7DrkjfrCttfs3Gkqa2tuFhB",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 4775,
+    "inscriptionId": "7b2cec3aea8003dd691c842559e1cc6f9e49e7ec99bff319c29e0f098753cae1i0",
+    "ownerAddress": "DMMYMxQGeJhJascrbcHhMPHkAkTVX72Sr9",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 4784,
+    "inscriptionId": "965f8ff9ecd883c648e5b37126250852d0e06fb4d6f8a1e8d924328f0ac62d77i0",
+    "ownerAddress": "DDSjmyMXAoYftF1XmrqWz8caqvSd4NfbpG",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 4918,
+    "inscriptionId": "1fc1c1349b8fd8af177dc094c98fb12f2b9783757ae0c4b2433d4401a28501d8i0",
+    "ownerAddress": "DGXsyexXhGaUUHaDByiHmRUjALMQmBXzWF",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 5102,
+    "inscriptionId": "98c4f94cfc3f371a7c467f212853be02a33d969b60e2f7e4c605d4caca26b974i0",
+    "ownerAddress": "DJL68ouFnbT9U1qXLQ9vWEzCGMVkwQzcSx",
+    "xHandle": "lil_defi",
+    "displayName": "Defi",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1991945169973788672/PKEYo6La_400x400.jpg",
+    "isTypeMember": true
+  },
+  {
+    "dogId": 5108,
+    "inscriptionId": "577e6411b98db900448f190293c5a3eb9a97b9e50bd1fc08e4d9186a62ad42c0i0",
+    "ownerAddress": "DG4ysjrui4gyHzwUjzFKcLRZ4B4ccEeZ9p",
+    "xHandle": "rivaura",
+    "displayName": "Riv",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1991853857383518208/g8oPBl10_400x400.jpg",
+    "isTypeMember": true
+  },
+  {
+    "dogId": 5129,
+    "inscriptionId": "1963bfe344ce68d6b3173e94c946b047befd9327d221efeae7f30e6c5650f226i0",
+    "ownerAddress": "DPMcEoi879PCc4ia4AZTUvfQYEr5yAmjNE",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 5227,
+    "inscriptionId": "551c58fb44a6cbce4143d6fbd9ddbbb8207e24437ce93542e835a5db12d8f5abi0",
+    "ownerAddress": "DLVFR6AceBJgL127i3UFdGszRFUc6Lyiaa",
+    "xHandle": "Mavmetax",
+    "displayName": "Mav",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1988059173217595392/35xfS7lE_400x400.jpg",
+    "isTypeMember": true
+  },
+  {
+    "dogId": 5263,
+    "inscriptionId": "5cebfa309decdc1426b637f31a006b812350c3819c6707512b30c3e0912937a9i0",
+    "ownerAddress": "D6GRCNNQ5pjjtA5PGUjWybRaS2UUyBgAJ8",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 5326,
+    "inscriptionId": "d7268436ecf47a5ab48f4b5dfbe9c4424ed4211c23be885a8736686221bc3e1ei0",
+    "ownerAddress": "DJoqHWtu1A3KgT4Ey6LAzKRwEEyMYLAiuc",
+    "xHandle": "luismeta",
+    "displayName": "Luis",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1992356633058373632/se6Oh1pn_400x400.jpg",
+    "isTypeMember": true
+  },
+  {
+    "dogId": 5351,
+    "inscriptionId": "0dc573b7a32c613bc4648f4c841e19dcc4cacefbd5b423f157d5f2f1a09be156i0",
+    "ownerAddress": "DP1wyxWTLfJQnzHrS9KMrG7x8GvmNVxwDV",
+    "xHandle": "Dc5Karim",
+    "displayName": "Karim",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1988840790316261376/LOBptxak_400x400.jpg",
+    "isTypeMember": false
+  },
+  {
+    "dogId": 5435,
+    "inscriptionId": "b59b0359baa6ffc24665fb0050b5287f41daa59231e59b15ff4560560a64bb2ci0",
+    "ownerAddress": "DA54YGYqQvLCC6XjwT1Yzwa8fPM12ovVD5",
+    "xHandle": "rafmeta",
+    "displayName": "Raf",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1988057402973757440/YtDmL6p4_400x400.jpg",
+    "isTypeMember": true
+  },
+  {
+    "dogId": 5439,
+    "inscriptionId": "e8d0f94411db3b8b324bce01c869e7dd81109539dcc4b3282c71056202bc7060i0",
+    "ownerAddress": "D7e6dHnKbTTVzS9xwh1HPVzda796US2tpw",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 5461,
+    "inscriptionId": "f25e65f1dcdfbbb93bd28a7e12472ba7b4b8c51c2da7715e588fa913d2dba8c2i0",
+    "ownerAddress": "DM8LD6qFvA3E2Qz5SFytrLDFC5TGJH4bib",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 5641,
+    "inscriptionId": "2aec6241935f07c0baba51bf84ab114c6485126f17ff8bcdc9c56ac2fa9c76eei0",
+    "ownerAddress": "DFNmMucFAaZLXbQa7oXLJJJVS87JEXtAcU",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 5669,
+    "inscriptionId": "71cb627eb909e44b1bc0f048096874c6773eac5e93bea23722e28377eb8337a4i0",
+    "ownerAddress": "DHSgdA3FwARTiJK31rFrdbuQ3eJELChA71",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 5721,
+    "inscriptionId": "e73a3384a096af5ba2f1377254990fb16fcc4672ffafba75f0a43d94803b7fe0i0",
+    "ownerAddress": "DKFpJaof5EHx5qm1f3u4B16XF8Ax3e6yya",
+    "xHandle": "chaxaurax",
+    "displayName": "Chax",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1994804836815048704/aqzHdaLU_400x400.jpg",
+    "isTypeMember": true
+  },
+  {
+    "dogId": 5756,
+    "inscriptionId": "debee87519f2581a34ceb911a35ea97b1a38c39e1a531bf91d5b291ecff07f73i0",
+    "ownerAddress": "DKqqnrcSMzRZYhi47m3Nejvy1wHpgknfkV",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 5883,
+    "inscriptionId": "6b82c1d75cad4089abeff15014c61f7d401244c0658fd5df249d2a6fd831db42i0",
+    "ownerAddress": "D8CZV9H3Naqzq8HQXGYUeqPJ1km2j4ojHd",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 6070,
+    "inscriptionId": "3df462655ea34ea8dc3fda9b3459e74d4dd893f91df758bcaa4041f9a9f8a68bi0",
+    "ownerAddress": "DAjXFHweP4gu5mQEJ6RtN4vCNjEPh2QXXL",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 6282,
+    "inscriptionId": "853479ea0be6ac32fb17bbe3fb3db1ccb0c8a0bb94c5167209c90ca17f8de882i0",
+    "ownerAddress": "DLyhqf38YzkzrhRGn4WWCwvKJonq6wBRkq",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 6377,
+    "inscriptionId": "d83c51c999ae438a979fee53a42f1589d23b67f81e0b21f1f5ae547e42e54a37i0",
+    "ownerAddress": "DSZWwvU7M6QubFJiF9byfXF4m4shi9xEqk",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 6841,
+    "inscriptionId": "ab2167bbe0c57d9c216adde4ba6ba72bf3ec39cd94520679af87ab103f38e4d0i0",
+    "ownerAddress": "D8Q6KN9bpue4Y3NUcZDfJxyUJHEgE5tGYh",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 6865,
+    "inscriptionId": "94cff9a9c18d66f186e9615032f2723cdfff1e04116bdba6e56458342097bf06i0",
+    "ownerAddress": "DBjjGmHTVaF12xfrz2TqvrHefcYLwjW79k",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 7065,
+    "inscriptionId": "dd922debbbc65f0147e17cd67fa23a84ae28424dcfbd4eb6c7da5773c435f0bci0",
+    "ownerAddress": "DRBa84kLWg7pu4oVTYuyebAakxA44YcHkD",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 7097,
+    "inscriptionId": "90b39568ad29902f07a850221d54fad7436eac493c89bff33e19bb04d2467300i0",
+    "ownerAddress": "D8BkLdDhbCS5oxaJ1krBMDCPw7DVXBZmDn",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 7198,
+    "inscriptionId": "5296c43ddafa0f8dc26381f71db40a2fee9879f53e8a77bb31c7dd6c9b112930i0",
+    "ownerAddress": "DE6n8D97EKWyvX1PoW3dQRWLPxz1uh1Wzh",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 7236,
+    "inscriptionId": "3298c1dcb60c5ec9c281c07e34eb5ef5fc2311c66bedd17b79bc323a4c01ee4di0",
+    "ownerAddress": "DPqTWrB17d17pbX3EMD3Yr6thUWpuuNgu5",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 7411,
+    "inscriptionId": "a8d15e1a0ddd2bdd9d1622e175ba3ee92712c9760489426b7809595cc1bbb20ci0",
+    "ownerAddress": "DP9ideHVSj4fp2Vk1tkHPDBWjB6tM6XKn3",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 7457,
+    "inscriptionId": "2b6e085a19cd832f71a8e1129b4ad6b11a18bfe6cd2def1729692a23fdd84883i0",
+    "ownerAddress": "DArGRsDnr1ErawaTzcFXLya4e8Zt6PgZRw",
+    "xHandle": "gruvemeta",
+    "displayName": "Gruve",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1992357450083717120/9Tq9GuEK_400x400.jpg",
+    "isTypeMember": true
+  },
+  {
+    "dogId": 7586,
+    "inscriptionId": "f2991383183e06d39df223dc49ffe15c061ccb599e40efc878f9d86b9b2050b4i0",
+    "ownerAddress": "D5e9wgKLYTmvHJaAXyZ9Nnh52HgecKMAio",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 7697,
+    "inscriptionId": "fc8785894af0f901ed785041ad11a9a8389ded80b9952f4f650418bd225149dbi0",
+    "ownerAddress": "DR8xZDxsrABtSHsxTNdXuvv5VaEJtgDhc3",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 7703,
+    "inscriptionId": "2af941bae536312a18547c71719a104379e2f1c9bea9b861bc8fb6b174f86893i0",
+    "ownerAddress": "DDNkaiMLTndQxf6qWmWPvssgsWHgzkzi3U",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 7835,
+    "inscriptionId": "10beec9ca5a3dc8a3b08a9ab8541cc00e8c30c404a31da8b6b77bd1c404f0f69i0",
+    "ownerAddress": "DFGWBPKqToDCXhUxmHy9k2CKZjz9jPNApM",
+    "xHandle": "MetalXMeta",
+    "displayName": "Metal",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1992368919709958144/d2-VEAPW_400x400.jpg",
+    "isTypeMember": false
+  },
+  {
+    "dogId": 7888,
+    "inscriptionId": "66fb5895fa3bdfeb1fa2953899058aeb5630c5729443c4dca7d94691f3252c54i0",
+    "ownerAddress": "D9MfP9kk1HRHqkdoYGjVKe2nQyf73CHaXB",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 7982,
+    "inscriptionId": "e97d0dd7d246f14387ee263ab6a1d4d0b3e6ea30fe77db10f759ba06a95a3bc4i0",
+    "ownerAddress": "DAcfa6w78UQ9wEGGDpMxsE5GgbnwpuSHuP",
+    "xHandle": "Javimedia",
+    "displayName": "Javi",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1992091937546121216/gOVEf6p1_400x400.jpg",
+    "isTypeMember": true
+  },
+  {
+    "dogId": 8096,
+    "inscriptionId": "9f8ff59c9cf61fae26186badd7bcc71f2a5d3dd7e1e645fbd2d12867b37abda3i0",
+    "ownerAddress": "DLD7uMv9nMgKVECRgurTisAyTb19X3Tmjv",
+    "xHandle": "typemedia",
+    "displayName": "Type Media",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1951553040885927936/DW80DABj_400x400.jpg",
+    "isTypeMember": true
+  },
+  {
+    "dogId": 8152,
+    "inscriptionId": "e7753e5242b72cdd963e6bb6fe26001f45218a9fa93021bbe8bd134bd0d80eadi0",
+    "ownerAddress": "DRuciPqrsDwQ9VMEgwJEhK16YBJUdm5Cio",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 8213,
+    "inscriptionId": "c4d3100c776112002813df096519ff1a8f1bb462690a58d4ebd232d3462a4014i0",
+    "ownerAddress": "D7cLFjQoEpJchnyhcPCRrzL7c32Qrnb1xd",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 8512,
+    "inscriptionId": "9601c6be5ba2b7ae1504c6ef933b506267dd7cd109965cb38c37ebb52b8152c9i0",
+    "ownerAddress": "DF4w9qfyhbkX2rNEhph1Vck6V1CpF3zymX",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 8514,
+    "inscriptionId": "f45c5a36a4f93d0bc4b22dc332eff323708b63df4a96372aba15e86b841cda33i0",
+    "ownerAddress": "DEtcG1QnHNFnRnFmMypPkXQ8bUMnpskxBC",
+    "xHandle": "kennelDAO",
+    "displayName": "KDAO",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1981558043591520256/a8LTtOfL_400x400.jpg",
+    "isTypeMember": false
+  },
+  {
+    "dogId": 8531,
+    "inscriptionId": "d4fdf34c59244fbd68348fd3e6a1655bd4511f14db13e621665c449ecc96a7d3i0",
+    "ownerAddress": "D7esYPPVxeMmPeXMEdfsMNKESykpgt2x5d",
+    "xHandle": "xrayzone",
+    "displayName": "XRay",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1996056516219338756/l_SBJH6I_400x400.jpg",
+    "isTypeMember": true
+  },
+  {
+    "dogId": 8550,
+    "inscriptionId": "8bc61fbe5beb46bdc244756d94c3ba54e739006fb6cdd04abc8df4ac140df566i0",
+    "ownerAddress": "DB3R8M4zdCxTAvYLZ2c8ZGuv5G9Fm7rwq9",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 8554,
+    "inscriptionId": "a6774f37623eac379fb276b5be4b76638b0e5277ecb9f53535e9367d31980d49i0",
+    "ownerAddress": "DDUXwihoeoeRR6yRFAGcfgm5VkcHy9m2wW",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 8579,
+    "inscriptionId": "e316c4dcd7b932f9b70fb22fefa7165ec66cd84ba1bb718873720687d579792bi0",
+    "ownerAddress": "DLDzZGc1RBKVYauRhW8aZJfz9QJpnooLSq",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 8644,
+    "inscriptionId": "6b258d10968cbf48ba73509d237ec4ecf45555c59fc1a57c36f964cbfaae843fi0",
+    "ownerAddress": "DDRYSetRRDQ26rrZ3HbQ1GgXWgRpWxrkL4",
+    "xHandle": "hBUDS_",
+    "displayName": "\u210fBUDS",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1935933954525216769/zfEwOpgT_400x400.jpg",
+    "isTypeMember": true
+  },
+  {
+    "dogId": 8670,
+    "inscriptionId": "3140825cd2bdbd50267fdf3cd993bc170463dc056a92a62f1f09630185985f51i0",
+    "ownerAddress": "DAHAUvaT6PcRedFSZbRUmA3STLGFSxR4Gy",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 8765,
+    "inscriptionId": "de38954bbaa04958f0ed14c6f77a0789445186a4c4f94a05fd655ba4d82ad583i0",
+    "ownerAddress": "DR9zu125uGhKpisibYHq3oLaQk9ipeAUDN",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 8774,
+    "inscriptionId": "b836e9813671604a6349fa5f003a55e314cc051ccd4d04443384059a5498f61ei0",
+    "ownerAddress": "DSkfzV6z7B3hYMsV13XFprhQHFYjqisGeU",
+    "xHandle": "geezymeta",
+    "displayName": "Geezy",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1991921660249690112/VE_jrqIg_400x400.jpg",
+    "isTypeMember": false
+  },
+  {
+    "dogId": 8999,
+    "inscriptionId": "677db087bca5c60a8a04bd51676866a991e53dbf6e98857b1db047b4ee5c104ai0",
+    "ownerAddress": "DArGRsDnr1ErawaTzcFXLya4e8Zt6PgZRw",
+    "xHandle": "gruvemeta",
+    "displayName": "Gruve",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1992357450083717120/9Tq9GuEK_400x400.jpg",
+    "isTypeMember": true
+  },
+  {
+    "dogId": 9040,
+    "inscriptionId": "578fb55c79565f1a308c1691b965af4ff216d03d4119faa11a1395345dbda36ci0",
+    "ownerAddress": "DR72a5hMpnhdyZ24s7bNiABzPdW2E8FFTc",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 9345,
+    "inscriptionId": "5adc4a772a7b4b6e17919bbbbcebf9be3056e2fd01e66000541a4e3a1c8a957ei0",
+    "ownerAddress": "DC4mrD61VR9TnrBBC7XV6nHDfFyKL12vSW",
+    "xHandle": "rivermetax",
+    "displayName": "rivermetax",
+    "avatarUrl": "",
+    "isTypeMember": false
+  },
+  {
+    "dogId": 9629,
+    "inscriptionId": "1b84cf9e7ee936ee52a01970b3bfba6d7e4bf0702aa9139c406b174adb0bbdfai0",
+    "ownerAddress": "DGi2yEM3UBWRDHJJ78vLJYaoTqZVNqUTkp",
+    "xHandle": "GuyTypeAura",
+    "displayName": "Guy",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1988901953234169856/23OvuX42_400x400.jpg",
+    "isTypeMember": true
+  },
+  {
+    "dogId": 9731,
+    "inscriptionId": "c82d2d6f0f75a866cfed5e100dfe1bc2950775168e8e52b061df99a6db1da85ei0",
+    "ownerAddress": "DRQTyWeBQxfTYk9NmQeCaVRa3XJVZkywS9",
+    "xHandle": "bluemetaX",
+    "displayName": "Blue",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1984262102513512448/L90xPvY4_400x400.jpg",
+    "isTypeMember": false
+  },
+  {
+    "dogId": 9990,
+    "inscriptionId": "7a27186fa6b1e1b3a86ccb4c927db71c00a29acf08ca47eb852cbcd003ef2ca4i0",
+    "ownerAddress": "DEbFxfsVjaEU3HXZKbBKz7e9jUS4zwJkq1",
+    "xHandle": "slickmetax",
+    "displayName": "Slick",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1992047193054744576/RyNZWHM6_400x400.jpg",
+    "isTypeMember": true
+  },
+  {
+    "dogId": 2439,
+    "inscriptionId": "f32093a7c9769b80e18ae9b55dedc05a2f42bfafc9796a855232f0254aab4900i0",
+    "ownerAddress": "DRUVfUvr8zuAqJ9gx7srxnNwKzjetsJrpq",
+    "xHandle": "BeanieDaoX",
+    "displayName": "BoB",
+    "avatarUrl": "https://pbs.twimg.com/profile_images/1984697970705801217/WbUNxWHa_400x400.jpg",
+    "isTypeMember": false
+  },
+  {
+    "dogId": 1156,
+    "inscriptionId": "7be235310cdae747cd962a49a824c30843ceed7b3ac230009b2dcf6816cae912i0",
+    "ownerAddress": "DCG7vHq3jgMNEf15rJEAvZqfKZ4zgbURWH",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 4718,
+    "inscriptionId": "b8e67536fe3650ceb95a9706918572d1cc34c73c779fc1b42c2b4ee39f2a2e46i0",
+    "ownerAddress": "DBdytcRoR39oe2XoLUtxG7EymEHvDoFUTr",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  },
+  {
+    "dogId": 1352,
+    "inscriptionId": "f7fca6096499b89c331997e39373a73d874e73e0b289bce4d56af76581988365i0",
+    "ownerAddress": "DANJkGfXb8NYCFzGbcKsFqkPiZYF2ggTBk",
+    "xHandle": null,
+    "displayName": null,
+    "avatarUrl": null,
+    "isTypeMember": null
+  }
+]
