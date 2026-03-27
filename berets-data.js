@@ -189,6 +189,15 @@ const BERETS = [
     "isTypeMember": false
   },
   {
+    "dogId": 4718,
+    "inscriptionId": "b8e67536fe3650ceb95a9706918572d1cc34c73c779fc1b42c2b4ee39f2a2e46i0",
+    "ownerAddress": "DBdytcRoR39oe2XoLUtxG7EymEHvDoFUTr",
+    "xHandle": "Krysis",
+    "displayName": "Krysis",
+    "avatarUrl": "https://market.doginaldogs.com/dogs/4718.png",
+    "isTypeMember": true
+  },
+  {
     "dogId": 4610,
     "inscriptionId": "18514210c451cf789bba418140815a00b2a3b4c713617ebc0fc844d5998aaca6i0",
     "ownerAddress": "DStKUAm3SgH4TAQZd8FHdL3kguTMY11Mbs",
