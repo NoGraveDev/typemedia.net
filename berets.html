@@ -181,26 +181,47 @@
 
         @media (max-width: 700px) {
             .owner-row {
-                flex-wrap: wrap;
-                gap: 12px;
-                padding: 14px 16px;
+                flex-wrap: nowrap;
+                gap: 10px;
+                padding: 12px 14px;
             }
             .owner-pfp {
-                width: 36px;
-                height: 36px;
+                width: 32px;
+                height: 32px;
+            }
+            .owner-info {
+                flex: 1;
+                min-width: 0;
+            }
+            .owner-handle {
+                font-size: 0.8rem;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .owner-count {
+                font-size: 0.6rem;
             }
             .owner-dogs {
-                width: 100%;
-                justify-content: flex-start;
-                margin-top: 4px;
+                flex-shrink: 0;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                max-width: 40%;
+                gap: 4px;
+                -webkit-overflow-scrolling: touch;
             }
             .owner-dog-thumb {
-                width: 40px;
-                height: 40px;
+                width: 36px;
+                height: 36px;
+                flex-shrink: 0;
             }
             .owner-rank {
-                min-width: 18px;
+                min-width: 16px;
                 font-size: 0.6rem;
+            }
+            .owner-badge {
+                width: 14px;
+                height: 14px;
             }
         }
     </style>
