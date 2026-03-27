@@ -6,6 +6,8 @@
 
 const TREASURY_DOGS = [
     { id: 8096, inscription: "9f8ff59c9cf61fae26186badd7bcc71f2a5d3dd7e1e645fbd2d12867b37abda3i0", number: 61357968 },
+    { id: 4637, inscription: "565055665fc61c01bdaf4ae976e7496bdac3205a97687d665a8ef5e9dcfee044i0", number: 61361244 },
+    { id: 9922, inscription: "bf9ddaaec708827999cb2fffced9ca677275052cf71883e8eb0ad8751d783075i0", number: 61356329 },
     { id: 1650, inscription: "f9b3bc90c188be1937bc1505ee8e46f78bf49b899ba6c9a20189844a56bc0abfi0", number: 61338619 },
     { id: 625, inscription: "1f6a3f219df763b97b360ed1cfaba2e602e5956872cf4a0e9ea975f5481fbdadi0", number: 61345367 },
     { id: 7342, inscription: "2f2af37ac901771632e01dc2008828a14c8051a4272f25726659ea97996ebd2ci0", number: 61346034 },
