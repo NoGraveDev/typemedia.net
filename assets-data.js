@@ -5,6 +5,7 @@
  */
 
 const TREASURY_DOGS = [
+    { id: 8096, inscription: "9f8ff59c9cf61fae26186badd7bcc71f2a5d3dd7e1e645fbd2d12867b37abda3i0", number: 61357968 },
     { id: 1650, inscription: "f9b3bc90c188be1937bc1505ee8e46f78bf49b899ba6c9a20189844a56bc0abfi0", number: 61338619 },
     { id: 625, inscription: "1f6a3f219df763b97b360ed1cfaba2e602e5956872cf4a0e9ea975f5481fbdadi0", number: 61345367 },
     { id: 7342, inscription: "2f2af37ac901771632e01dc2008828a14c8051a4272f25726659ea97996ebd2ci0", number: 61346034 },
@@ -20,7 +21,6 @@ const TREASURY_DOGS = [
     { id: 9682, inscription: "485bc49e676d1d402c8b45188d8049fe9cff3a596b5d4f01587c1c4188ddbd09i0", number: 61355266 },
     { id: 8826, inscription: "f5a576830326f4107b9d4a46a1fd928b086f76e08872fe5c0d7c20ac43e3b5f0i0", number: 61355549 },
     { id: 8591, inscription: "da06cb4244d457a9b12ed0cc1f566e60be3719ce1ad170f266ff7a4f486e4240i0", number: 61356763 },
-    { id: 8096, inscription: "9f8ff59c9cf61fae26186badd7bcc71f2a5d3dd7e1e645fbd2d12867b37abda3i0", number: 61357968 },
 ];
 
 /*
