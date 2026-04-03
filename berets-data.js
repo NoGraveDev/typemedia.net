@@ -341,15 +341,7 @@ const BERETS = [
     "avatarUrl": "https://market.doginaldogs.com/dogs/8774.png",
     "isTypeMember": false
   },
-  {
-    "dogId": 8999,
-    "inscriptionId": "677db087bca5c60a8a04bd51676866a991e53dbf6e98857b1db047b4ee5c104ai0",
-    "ownerAddress": "DArGRsDnr1ErawaTzcFXLya4e8Zt6PgZRw",
-    "xHandle": "gruvemeta",
-    "displayName": "Gruve",
-    "avatarUrl": "avatars/gruvemeta.jpg",
-    "isTypeMember": true
-  },
+
   {
     "dogId": 9345,
     "inscriptionId": "5adc4a772a7b4b6e17919bbbbcebf9be3056e2fd01e66000541a4e3a1c8a957ei0",
