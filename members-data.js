@@ -56,6 +56,9 @@ const MEMBERS = [
     { handle: "@chaxaurax", avatar: "avatars/chaxaurax.jpg" },
     { handle: "@Bjaura", avatar: "avatars/bjaura.jpg" },
     { handle: "@goosemetax", avatar: "avatars/goosemetax.jpg" },
+    { handle: "@HawaiiSol", avatar: "avatars/hawaiisol.jpg" },
+    { handle: "@GraveMetaX", avatar: "avatars/gravemetax.jpg" },
+    { handle: "@devinteerfilms", avatar: "avatars/devinteerfilms.jpg" },
 ];
 
 // ── Profile Data (fetched from X) ──────────────────────
@@ -111,6 +114,9 @@ const PROFILES = {
     "barkmeta": { name: "Bark", bio: "Financial News & Commentary. Chief Woof Officer @doginaldogs. With God all things are possible.", followers: 286946, verified: true },
     "edgemeta": { name: "Edge", bio: "@CryptoSpacesNet Spaces Host 🎙️ | Truth maxi, Creator, Skater | @doginaldogs 🐶 | Join The Edge (subs.) TODAY", followers: 13915, verified: true },
     "Veemeta": { name: "Vee", bio: "CSN Host | God is good | Chief Roar Officer @doginaldogs", followers: 24373, verified: true },
+    "HawaiiSol": { name: "Hawaii", bio: "Staying active while navigating the Crypto space! 🇺🇸 🇯🇵 | @doginaldogs", followers: 2500, verified: true },
+    "GraveMetaX": { name: "Grave", bio: "Audio Engineer • Web3 Creator | Founder of @hBUDS_ @ScribbleXRB @WaveWizardApp | Doginal Dog #420", followers: 3200, verified: true },
+    "devinteerfilms": { name: "Devin", bio: "Independent Filmmaker", followers: 500, verified: true },
 };
 
 // ── Member Links (from Google Form) ──────────────────

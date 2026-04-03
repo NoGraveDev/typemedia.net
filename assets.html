@@ -164,7 +164,7 @@
             <div class="section-label">TREASURY</div>
             <h1 class="page-title">Assets</h1>
             <p class="page-desc">Doginal NFTs and digital assets held by the Type Media.</p>
-            <p style="margin-top: 16px;"><a href="https://docs.google.com/spreadsheets/d/19i33cleSCFMOXEWS5RxBfh_LzZTlQ63cSg_hFTOLH4I/edit?gid=1548131125#gid=1548131125" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 6px; padding: 10px 22px; background: #111; color: #fff; font-family: 'Space Grotesk', sans-serif; font-size: 0.9rem; font-weight: 600; text-decoration: none; border-radius: 8px; transition: background 0.2s;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='#111'">📊 Type DAO Rankings →</a></p>
+            <p style="margin-top: 16px;"><button onclick="openDaoModal()" style="display: inline-flex; align-items: center; gap: 6px; padding: 10px 22px; background: #111; color: #fff; font-family: 'Space Grotesk', sans-serif; font-size: 0.9rem; font-weight: 600; text-decoration: none; border-radius: 8px; border: none; cursor: pointer; transition: background 0.2s;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='#111'">📊 Type DAO Rankings →</button></p>
 
             <!-- Stats Bar -->
             <div class="assets-stats">
@@ -237,7 +237,297 @@
         </div>
     </footer>
 
+    <!-- DAO Rankings Modal -->
+    <div class="dao-overlay" id="daoModal">
+        <div class="dao-modal">
+            <button class="dao-close" onclick="closeDaoModal()" aria-label="Close">&times;</button>
+            <div class="dao-header">
+                <h2 class="dao-title">Type DAO Rankings</h2>
+                <p class="dao-subtitle">57 holders · 100% allocated · 0 shares available</p>
+                <div class="dao-stats">
+                    <div class="dao-stat">
+                        <span class="dao-stat-value" id="daoInvestors">57</span>
+                        <span class="dao-stat-label">Holders</span>
+                    </div>
+                    <div class="dao-stat">
+                        <span class="dao-stat-value">100%</span>
+                        <span class="dao-stat-label">Allocated</span>
+                    </div>
+                    <div class="dao-stat">
+                        <span class="dao-stat-value">0</span>
+                        <span class="dao-stat-label">Available</span>
+                    </div>
+                </div>
+            </div>
+            <div class="dao-list" id="daoList"></div>
+        </div>
+    </div>
+
+    <style>
+        /* ── DAO Modal ── */
+        .dao-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.75);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s ease;
+            padding: 20px;
+        }
+        .dao-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .dao-modal {
+            background: #0a0a0a;
+            border: 1px solid #222;
+            border-radius: 20px;
+            max-width: 560px;
+            width: 100%;
+            max-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transform: scale(0.95) translateY(10px);
+            transition: transform 0.25s ease;
+        }
+        .dao-overlay.active .dao-modal {
+            transform: scale(1) translateY(0);
+        }
+        .dao-close {
+            position: absolute;
+            top: 12px;
+            right: 16px;
+            background: none;
+            border: none;
+            color: #666;
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 4px 8px;
+            line-height: 1;
+            transition: color 0.15s;
+            z-index: 2;
+        }
+        .dao-close:hover { color: #fff; }
+        .dao-header {
+            padding: 28px 24px 20px;
+            text-align: center;
+            border-bottom: 1px solid #1a1a1a;
+            flex-shrink: 0;
+        }
+        .dao-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #fff;
+            margin: 0;
+        }
+        .dao-subtitle {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: #666;
+            margin: 6px 0 0;
+            letter-spacing: 0.03em;
+        }
+        .dao-stats {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-top: 16px;
+        }
+        .dao-stat { text-align: center; }
+        .dao-stat-value {
+            display: block;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        .dao-stat-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.6rem;
+            color: #666;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .dao-list {
+            overflow-y: auto;
+            padding: 12px 16px 20px;
+            flex: 1;
+        }
+        .dao-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 12px;
+            border-radius: 10px;
+            transition: background 0.15s;
+            animation: fadeUp 0.3s ease both;
+        }
+        .dao-row:hover { background: #111; }
+        .dao-rank {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            color: #555;
+            min-width: 22px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+        .dao-rank-top {
+            color: #d4a017;
+            font-weight: 700;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.85rem;
+        }
+        .dao-info {
+            flex: 1 1 0%;
+            min-width: 0;
+            overflow: hidden;
+        }
+        .dao-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #eee;
+        }
+        .dao-name a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.15s;
+        }
+        .dao-name a:hover { color: #1d9bf0; }
+        .dao-pct {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.6rem;
+            color: #666;
+            margin-top: 1px;
+        }
+        .dao-shares-wrap {
+            margin-left: auto;
+            padding-left: 12px;
+            flex-shrink: 0;
+            display: table;
+        }
+        .dao-shares-wrap td {
+            vertical-align: middle;
+        }
+        .dao-shares-wrap .dao-num {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #fff;
+            white-space: nowrap;
+            padding-right: 8px;
+        }
+        .dao-shares-wrap .dao-icon {
+            width: 22px;
+            height: 22px;
+        }
+        .dao-shares-wrap .dao-icon img {
+            display: block;
+            width: 22px;
+            height: 22px;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+
+
+        @media (max-width: 600px) {
+            .dao-overlay { padding: 12px 8px; }
+            .dao-modal {
+                border-radius: 16px;
+                max-height: 80vh;
+                max-width: 100%;
+            }
+            .dao-header { padding: 16px 14px 12px; }
+            .dao-title { font-size: 1.1rem; }
+            .dao-subtitle { font-size: 0.6rem; }
+            .dao-stats { gap: 16px; margin-top: 10px; }
+            .dao-stat-value { font-size: 1rem; }
+            .dao-stat-label { font-size: 0.5rem; }
+            .dao-close { top: 6px; right: 10px; font-size: 1.4rem; }
+            .dao-list { padding: 6px; }
+            .dao-row { gap: 6px; padding: 6px 8px; border-radius: 8px; }
+            .dao-rank { font-size: 0.7rem; min-width: 18px; }
+            .dao-name { font-size: 0.75rem; }
+            .dao-name span { font-size: 0.6rem !important; }
+            .dao-pct { font-size: 0.55rem; }
+            .dao-shares-wrap .dao-icon, .dao-shares-wrap .dao-icon img { width: 16px; height: 16px; }
+            .dao-shares-wrap .dao-num { font-size: 0.75rem; padding-right: 4px; }
+        }
+    </style>
+
+    <script src="dao-data.js"></script>
     <script src="assets-data.js"></script>
     <script src="main.js"></script>
+    <script>
+        let daoFetched = false;
+        async function openDaoModal() {
+            const overlay = document.getElementById('daoModal');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            // Fetch live data from Google Sheets (only once per page load)
+            if (!daoFetched) {
+                const ok = await fetchDaoData();
+                daoFetched = true;
+                // Update stats
+                document.getElementById('daoInvestors').textContent = DAO_MEMBERS.length;
+                document.querySelector('.dao-subtitle').textContent = 
+                    `${DAO_MEMBERS.length} holders · 100% allocated · 0 shares available`;
+            }
+            renderDaoList();
+        }
+        function closeDaoModal() {
+            const overlay = document.getElementById('daoModal');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        // Close on overlay click
+        document.getElementById('daoModal').addEventListener('click', function(e) {
+            if (e.target === this) closeDaoModal();
+        });
+        // ESC to close
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeDaoModal();
+        });
+
+        function renderDaoList() {
+            const list = document.getElementById('daoList');
+            list.innerHTML = ''; // Clear for fresh render with live data
+            const maxShares = DAO_MEMBERS[0].shares;
+
+            DAO_MEMBERS.forEach((m, i) => {
+                const row = document.createElement('div');
+                row.className = 'dao-row';
+                row.style.animationDelay = (i * 0.02) + 's';
+
+                const isTop5 = m.rank <= 5;
+                const rankClass = isTop5 ? 'dao-rank dao-rank-top' : 'dao-rank';
+
+                // Name with link if handle exists
+                const nameHTML = m.handle
+                    ? `<a href="https://x.com/${m.handle}" target="_blank">@${m.handle}</a>`
+                    : m.name;
+
+                row.innerHTML = `
+                    <span class="${rankClass}">${m.rank}</span>
+                    <div class="dao-info">
+                        <div class="dao-name">${m.name} ${m.handle ? '<span style="color:#555;font-size:0.7rem;font-weight:400;">(' + nameHTML + ')</span>' : ''}</div>
+                        <div class="dao-pct">${m.shares}% holding</div>
+                    </div>
+                    <table class="dao-shares-wrap"><tr><td class="dao-num">${m.shares}</td><td class="dao-icon"><img src="logo.jpg" alt="share"></td></tr></table>
+                `;
+                list.appendChild(row);
+            });
+        }
+    </script>
 </body>
 </html>
+<!-- deployed 1775139933 -->

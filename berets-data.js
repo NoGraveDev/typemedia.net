@@ -86,8 +86,8 @@ const BERETS = [
     "ownerAddress": "DEcZHL1rXK8sz4pXxzBcgCMeTrbh2MiYio",
     "xHandle": "HawaiiSol",
     "displayName": "HawaiiSol",
-    "avatarUrl": "https://market.doginaldogs.com/dogs/1474.png",
-    "isTypeMember": false
+    "avatarUrl": "avatars/hawaiisol.jpg",
+    "isTypeMember": true
   },
   {
     "dogId": 1529,
@@ -376,6 +376,24 @@ const BERETS = [
     "displayName": "bluemetaX",
     "avatarUrl": "https://market.doginaldogs.com/dogs/9731.png",
     "isTypeMember": false
+  },
+  {
+    "dogId": 3411,
+    "inscriptionId": "48dcec9949da988ef8f4a4ec3d0d8f6e0e665c228b05cccdf50a8b570f403ea3i0",
+    "ownerAddress": "DPh4YLhLsgZia5fstE8A22L5wmseRYjxrs",
+    "xHandle": "Humble_Reminder",
+    "displayName": "Humble",
+    "avatarUrl": "avatars/humble_reminder.jpg",
+    "isTypeMember": true
+  },
+  {
+    "dogId": 8999,
+    "inscriptionId": "677db087bca5c60a8a04bd51676866a991e53dbf6e98857b1db047b4ee5c104ai0",
+    "ownerAddress": "DEbFxfsVjaEU3HXZKbBKz7e9jUS4zwJkq1",
+    "xHandle": "slickmetax",
+    "displayName": "slickmetax",
+    "avatarUrl": "avatars/slickmetax.jpg",
+    "isTypeMember": true
   },
   {
     "dogId": 9990,
