@@ -2,10 +2,10 @@ const BERETS = [
   {
     "dogId": 104,
     "inscriptionId": "f2aba319b6bcbc18ec2cf64205e62af540eab066cbf2276b7f49056d4f820457i0",
-    "ownerAddress": "DG4ysjrui4gyHzwUjzFKcLRZ4B4ccEeZ9p",
-    "xHandle": "rivaura",
-    "displayName": "rivaura",
-    "avatarUrl": "avatars/rivaura.jpg",
+    "ownerAddress": "DXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "xHandle": "rollmeta",
+    "displayName": "rollmeta",
+    "avatarUrl": "https://market.doginaldogs.com/dogs/104.png",
     "isTypeMember": true
   },
   {
@@ -119,11 +119,11 @@ const BERETS = [
   {
     "dogId": 3309,
     "inscriptionId": "a423ceee7b94ae5b7ab17fb1bab8af826fc77422133f272968e1bb0dd173e232i0",
-    "ownerAddress": "DJL68ouFnbT9U1qXLQ9vWEzCGMVkwQzcSx",
-    "xHandle": "lil_defi",
-    "displayName": "lil_defi",
-    "avatarUrl": "avatars/lil_defi.jpg",
-    "isTypeMember": true
+    "ownerAddress": "DXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "xHandle": "firemetax",
+    "displayName": "firemetax",
+    "avatarUrl": "https://market.doginaldogs.com/dogs/3309.png",
+    "isTypeMember": false
   },
   {
     "dogId": 3372,
